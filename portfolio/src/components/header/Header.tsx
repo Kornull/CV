@@ -1,29 +1,18 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 import { HeaderLogo } from './headerLogo';
+import { HeaderNavigate } from './headerNavigate';
 
 import styles from './Header.module.scss';
-import { NavLink } from 'react-router-dom';
 
-const aarr = [
-  'lorem',
-  '{list(anchor)}',
-  '{list(anchor)}',
-  '{list(anchor)}',
-  '{list(anchor)}',
-];
 const Header = () => {
   const [isOpenMenu, setOpenMenu] = useState<boolean>(false);
 
   const toggleDrawer = () => {
     setOpenMenu(!isOpenMenu);
   };
-
-  useEffect(() => {
-    console.log(isOpenMenu, 'use');
-  }, [isOpenMenu]);
 
   return (
     <header className={styles.header}>
@@ -40,42 +29,8 @@ const Header = () => {
           }
         </div>
       </div>
-      {isOpenMenu && (
-        <div
-          className={styles.headerNavigate}
-          style={{ width: '100%', minHeight: '60px', background: '#0b3f8d' }}
-        >
-          <nav className={styles.headerNavigateContainer}>
-            <ul className={styles.headerLinks}>
-              <li>
-                <NavLink to="#" className={styles.headerLink}>
-                  Lorem, ipsum.
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="#" className={styles.headerLink}>
-                  Lorem, ipsum.
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="#" className={styles.headerLink}>
-                  Lorem, ipsum.
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="#" className={styles.headerLink}>
-                  Lorem, ipsum.
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="#" className={styles.headerLink}>
-                  Lorem, ipsum.
-                </NavLink>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      )}
+
+      <HeaderNavigate openNavigate={isOpenMenu} />
     </header>
   );
 };
