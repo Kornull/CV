@@ -1,12 +1,20 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import styles from '../Header.module.scss';
+import React from 'react';
 
 type NavigateProps = {
   openNavigate: boolean;
+  setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const HeaderNavigate = ({ openNavigate }: NavigateProps) => {
+export const HeaderNavigate = ({
+  openNavigate,
+  setOpenMenu,
+}: NavigateProps) => {
+  const handleCloseMenu = (): void => {
+    setOpenMenu(false);
+  };
   return (
     <div
       className={
@@ -18,29 +26,49 @@ export const HeaderNavigate = ({ openNavigate }: NavigateProps) => {
       <nav className={styles.headerNavigateContainer}>
         <ul className={styles.headerLinks}>
           <li>
-            <Link to="/" className={styles.headerLink}>
-              Lorem, ipsum.
-            </Link>
+            <NavLink
+              to="/"
+              className={styles.headerLink}
+              onClick={handleCloseMenu}
+            >
+              lorem
+            </NavLink>
           </li>
           <li>
-            <Link to="/ss" className={styles.headerLink}>
-              Lorem, ipsum.
-            </Link>
+            <NavLink
+              to="/ss"
+              className={styles.headerLink}
+              onClick={handleCloseMenu}
+            >
+              lorem
+            </NavLink>
           </li>
           <li>
-            <Link to="/fd" className={styles.headerLink}>
-              Lorem, ipsum.
-            </Link>
+            <NavLink
+              to="/fd"
+              className={styles.headerLink}
+              onClick={handleCloseMenu}
+            >
+              lorem
+            </NavLink>
           </li>
           <li>
-            <Link to="/ff" className={styles.headerLink}>
-              Lorem, ipsum.
-            </Link>
+            <NavLink
+              to="/ff"
+              className={styles.headerLink}
+              onClick={handleCloseMenu}
+            >
+              lorem
+            </NavLink>
           </li>
           <li>
-            <Link to="" className={styles.headerLink}>
-              Lorem, ipsum.
-            </Link>
+            <NavLink
+              to=""
+              className={styles.headerLink}
+              onClick={handleCloseMenu}
+            >
+              lorem
+            </NavLink>
           </li>
         </ul>
       </nav>

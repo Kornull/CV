@@ -1,7 +1,7 @@
 @import 'src/scss/default-styles';
 
 .header {
-  width: 100%;
+  width: $width;
   min-height: $heigth-header;
   background: $bg-color-header;
   box-shadow: 0 0 15px #1b0ab4b0;
@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: $width;
     max-width: $max-width;
     height: inherit;
     margin: 0 auto;
@@ -35,8 +35,8 @@
     transition: text-shadow 0.3s ease-out, color 0.3s ease-out;
 
     &:hover {
-      color: $black;
-      text-shadow: 0 0 4px $white;
+      color: $active-header;
+      text-shadow: 0 0 8px $white;
     }
   }
 
@@ -64,21 +64,20 @@
     align-items: center;
     height: 0;
     overflow: hidden;
-    transition: all 0.3s linear;
-
+    transition: all 0.2s linear;
 
     &Container {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
+      width: $width;
       max-width: 1420px;
       margin: 0 auto;
       padding: 10px;
 
-      @media (width <= 798px) {
-       justify-content: start;
-       margin-left: 32px;
+      @media (width <= $medium-width) {
+        justify-content: start;
+        margin-left: 32px;
       }
     }
   }
@@ -86,7 +85,7 @@
   &Navigate.show {
     height: 50px;
 
-    @media (width <= 798px) {
+    @media (width <= $medium-width) {
       height: 210px;
     }
   }
@@ -96,7 +95,7 @@
     flex-wrap: wrap;
     gap: 16px;
 
-    @media (width <= 798px) {
+    @media (width <= $medium-width) {
       flex-direction: column;
       justify-content: start;
     }
@@ -110,30 +109,23 @@
     color: $white;
     font-weight: 700;
     font-size: $font18;
+    text-transform: capitalize;
     transition: color 0.3s ease-out;
 
     &::after {
       position: absolute;
       bottom: -2px;
       left: 0;
-      width: 100%;
+      width: $width;
       height: 2px;
-      background: $link-hover;
+      background: $active-header;
       opacity: 0;
       transition: opacity 0.3s ease-out;
       content: '';
     }
 
     &:hover {
-      color: $link-hover;
-
-      &::after {
-        opacity: 1;
-      }
-    }
-
-    &.active {
-      color: $link-hover;
+      color: $active-header;
 
       &::after {
         opacity: 1;

@@ -30,7 +30,7 @@ const Header = () => {
         </div>
       </div>
 
-      <HeaderNavigate openNavigate={isOpenMenu} />
+      <HeaderNavigate openNavigate={isOpenMenu} setOpenMenu={setOpenMenu} />
     </header>
   );
 };
