@@ -1,6 +1,12 @@
 @import 'https://fonts.googleapis.com/css2?family=Nova+Oval&display=swap';
 @import './scss/default-styles';
 
+:focus,
+:active {
+  outline: none;
+}
+
+
 body {
   position: relative;
   margin: 0;
@@ -45,4 +51,17 @@ img {
 
 main {
   min-height: 100vh;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  text-transform: capitalize;
+  background: none;
+  border: none;
+  cursor: pointer;
 }

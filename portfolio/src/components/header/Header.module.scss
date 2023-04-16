@@ -26,6 +26,30 @@
     text-align: center;
   }
 
+  &ButtonsBlock {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &ButtonLang {
+    position: relative;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    width: 50px;
+    height: 30px;
+    color: $white;
+    font-size: 20px;
+    text-align: center;
+
+    &Icon {
+      width: 20px;
+      height: 24px;
+      color: $white;
+    }
+  }
+
   &Title {
     color: $white;
     font-weight: bold;

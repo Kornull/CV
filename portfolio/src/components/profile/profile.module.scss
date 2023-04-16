@@ -1,9 +1,9 @@
-@import 'src/scss/default-styles.scss';
+@import 'src/scss/default-styles';
 
 .profile {
   width: $width;
-  background: #000;
   height: 100vh;
+  background: #000;
 
   &Container {
     display: flex;
@@ -15,9 +15,9 @@
 
   &Sammary {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     width: 60%;
     height: 100vh;
   }
