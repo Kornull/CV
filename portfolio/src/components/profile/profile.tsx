@@ -6,7 +6,7 @@ import styles from './profile.module.scss';
 
 const Profile = () => {
   return (
-    <div className={styles.profile}>
+    <div className={styles.profile} id={'summary'}>
       <div className={styles.profileContainer}>
         <ProfileSummary />
 

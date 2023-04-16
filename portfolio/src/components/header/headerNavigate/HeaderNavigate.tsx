@@ -15,6 +15,7 @@ export const HeaderNavigate = ({
   const handleCloseMenu = (): void => {
     setOpenMenu(false);
   };
+
   return (
     <div
       className={
@@ -27,21 +28,21 @@ export const HeaderNavigate = ({
         <ul className={styles.headerLinks}>
           <li>
             <a
+              href="#summary"
+              className={styles.headerLink}
+              onClick={handleCloseMenu}
+            >
+              summary
+            </a>
+          </li>
+          <li>
+            <a
               href="#skills"
               className={styles.headerLink}
               onClick={handleCloseMenu}
             >
               skills
             </a>
-          </li>
-          <li>
-            <NavLink
-              to="/ss"
-              className={styles.headerLink}
-              onClick={handleCloseMenu}
-            >
-              lorem
-            </NavLink>
           </li>
           <li>
             <NavLink
@@ -63,11 +64,11 @@ export const HeaderNavigate = ({
           </li>
           <li>
             <NavLink
-              to=""
+              to="/"
               className={styles.headerLink}
               onClick={handleCloseMenu}
             >
-              lorem
+              main
             </NavLink>
           </li>
         </ul>

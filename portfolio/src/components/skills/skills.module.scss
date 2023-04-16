@@ -2,7 +2,7 @@
 @import 'src/scss/mixins';
 
 .skill {
-  min-height: 300px;
+  min-height: $w300;
   padding-top: 50px;
   background-color: $white;
 
@@ -14,7 +14,7 @@
 
   &Title {
     margin: 0 auto 50px;
-    font-size: 24px;
+    font-size: $size24;
     font-family: $merriweather-font;
     text-align: center;
     text-transform: uppercase;
@@ -34,12 +34,18 @@
     @media (max-width: $w580) {
       width: $deg100;
     }
+
+    &Img {
+      width: auto;
+      height: 60px;
+      margin-right: 20px;
+    }
   }
 
   &Block {
     width: $deg70;
     margin: 0 auto 40px;
-    padding: 0 16px;
+    padding: 0 $size16;
 
     @media (max-width: $w798) {
       width: $deg80;
@@ -53,16 +59,21 @@
   &List {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: $size24;
     align-items: center;
     justify-content: space-between;
 
+    @media (max-width: $w580) {
+      gap: $size10;
+    }
+
     &Element {
       position: relative;
+      display: block;
       margin-bottom: 10px;
       color: $skill-color;
       font-weight: bold;
-      font-size: 18px;
+      font-size: $size18;
       text-align: center;
 
       @media (max-width: $w580) {
@@ -73,10 +84,10 @@
         position: absolute;
         bottom: -4px;
         left: 0;
-        width: 100%;
+        width: $deg100;
         height: 4px;
         background-color: $underline;
-        border-radius: 15px;
+        border-radius: $size16;
         content: '';
       }
     }

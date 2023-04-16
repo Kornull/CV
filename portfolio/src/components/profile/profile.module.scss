@@ -3,6 +3,7 @@
 .profile {
   width: $width;
   min-height: 460px;
+  padding-top: 60px;
   background-color: $black;
   background-image: url('src/assets/bg-about.jpg');
   background-repeat: no-repeat;
@@ -17,7 +18,7 @@
 
   @media (max-width: $w798) {
     height: auto;
-    min-height: 300px;
+    min-height: $w300;
   }
 
   &Container {
@@ -35,7 +36,7 @@
     }
 
     @media (max-width: $w580) {
-      min-height: 300px;
+      min-height: $w300;
     }
   }
 

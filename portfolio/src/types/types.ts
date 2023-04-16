@@ -6,4 +6,5 @@ export enum LanguageQuery {
   BTN_CLOSE = 'buttons.close',
   ABOUT = 'about',
   ABOUT_FULL = 'about-full',
+  SKILLS = 'skills',
 }
