@@ -1,13 +1,15 @@
-import { SkillsLine } from './skillsLine/skillsLine';
+import { SkillsLine } from './skillsLine';
+import { SkillsList } from './skillsList';
 
 import styles from './skills.module.scss';
 
 const Skills = () => {
   return (
-    <div className={styles.skill}>
+    <div className={styles.skill} id={'skills'}>
       <div className={styles.skillContainer}>
+        <h2 className={styles.skillTitle}>skills</h2>
         <SkillsLine />
-        <h2>dddd</h2>
+        <SkillsList />
       </div>
     </div>
   );

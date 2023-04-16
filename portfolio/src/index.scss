@@ -1,4 +1,5 @@
 @import 'https://fonts.googleapis.com/css2?family=Nova+Oval&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap';
 @import './scss/default-styles';
 
 :focus,
@@ -6,6 +7,9 @@
   outline: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   position: relative;

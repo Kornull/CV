@@ -2,7 +2,7 @@
 @import 'src/scss/mixins';
 
 .skill {
-  height: 300px;
+  min-height: 300px;
   padding-top: 50px;
   background-color: $white;
 
@@ -12,18 +12,73 @@
     overflow-x: hidden;
   }
 
+  &Title {
+    margin: 0 auto 50px;
+    font-size: 24px;
+    font-family: $merriweather-font;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
   &Marguee {
     display: flex;
     justify-content: space-around;
-    padding: 0 10px;
     width: $deg70;
-    margin: 0 auto;
+    margin: 0 auto 30px;
+    padding: 0 10px;
 
     @media (max-width: $w798) {
       width: $deg80;
     }
+
     @media (max-width: $w580) {
       width: $deg100;
+    }
+  }
+
+  &Block {
+    width: $deg70;
+    margin: 0 auto 40px;
+    padding: 0 16px;
+
+    @media (max-width: $w798) {
+      width: $deg80;
+    }
+
+    @media (max-width: $w580) {
+      width: $deg100;
+    }
+  }
+
+  &List {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+
+    &Element {
+      position: relative;
+      margin-bottom: 10px;
+      color: $skill-color;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+
+      @media (max-width: $w580) {
+        font-size: $size16;
+      }
+
+      &::after {
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $underline;
+        border-radius: 15px;
+        content: '';
+      }
     }
   }
 }

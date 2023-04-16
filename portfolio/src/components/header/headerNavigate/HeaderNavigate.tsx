@@ -26,13 +26,13 @@ export const HeaderNavigate = ({
       <nav className={styles.headerNavigateContainer}>
         <ul className={styles.headerLinks}>
           <li>
-            <NavLink
-              to="/"
+            <a
+              href="#skills"
               className={styles.headerLink}
               onClick={handleCloseMenu}
             >
-              lorem
-            </NavLink>
+              skills
+            </a>
           </li>
           <li>
             <NavLink
