@@ -3,12 +3,12 @@
 .profile {
   width: $width;
   height: 460px;
-  background: #000;
-  background-color: black;
+  background-color: $black;
   background-image: url('public/bg-about.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
 
   @media (width <= $w980) {
     height: $deg100;
@@ -16,20 +16,19 @@
   }
 
   @media (width <= 580px) {
-    min-height: 300px;
-
     height: auto;
+    min-height: 300px;
   }
 
   &Container {
     display: flex;
+    gap: 6px;
     width: $width;
     max-width: $max-width;
     min-height: $deg100;
-    margin: 0 auto;
-    padding: 0 20px;
     min-height: 460px;
-    gap: 6px;
+    margin: 0 auto;
+    padding: 0 $size16;
 
     @media (width <= $w980) {
       min-height: 356px;
@@ -40,12 +39,12 @@
     }
   }
 
-  &Sammary {
+  &Summary {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 74%;
-    margin-bottom: 20px;
+    margin-bottom: $size20;
 
     @media (width <= $w480) {
       width: $deg100;
@@ -57,12 +56,12 @@
       color: $white;
       font-size: $size22;
       line-height: 1.4;
-      word-wrap: break-word;
       text-align: initial;
       text-indent: $size16;
+      word-wrap: break-word;
 
       @media (width <= $w1200) {
-        font-size: 20px;
+        font-size: $size20;
       }
 
       @media (width <= $w980) {
@@ -72,9 +71,9 @@
       }
 
       &Button {
-        text-transform: lowercase;
         color: $button-text;
         font-size: inherit;
+        text-transform: lowercase;
       }
     }
   }
@@ -83,12 +82,14 @@
     position: relative;
     width: 24%;
     overflow: hidden;
+
     &Img {
       position: absolute;
-      bottom: 0;
       right: 0;
+      bottom: 0;
       width: $deg100;
     }
+
     @media (width <= $w480) {
       display: none;
     }
