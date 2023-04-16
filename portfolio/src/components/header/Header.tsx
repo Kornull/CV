@@ -1,33 +1,32 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { ImEarth } from 'react-icons/im';
-
 import { HeaderLogo } from './headerLogo';
 import { HeaderNavigate } from './headerNavigate';
+import { HeaderButtons } from './headerButtons';
 
 import styles from './Header.module.scss';
+import { LanguageQuery } from 'src/types';
 
 const Header = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const [isOpenMenu, setOpenMenu] = useState<boolean>(false);
-  const [lang, setLang] = useState<string>('en');
+  const [lang, setLang] = useState<string>(LanguageQuery.EN);
 
-  const handleLanguage = () => {
-    if (lang === 'en') {
-      i18n.changeLanguage('ru');
-      setLang('ru');
-      localStorage.setItem('lang', 'ru');
+  const handleLanguageQuery = (): void => {
+    if (lang === LanguageQuery.EN) {
+      i18n.changeLanguage(LanguageQuery.RU);
+      setLang(LanguageQuery.RU);
+      localStorage.setItem(LanguageQuery.LANG, LanguageQuery.RU);
     }
-    if (lang === 'ru') {
-      i18n.changeLanguage('en');
-      setLang('en');
-      localStorage.setItem('lang', 'en');
+    if (lang === LanguageQuery.RU) {
+      i18n.changeLanguage(LanguageQuery.EN);
+      setLang(LanguageQuery.EN);
+      localStorage.setItem(LanguageQuery.LANG, LanguageQuery.EN);
     }
   };
 
-  const toggleDrawer = () => {
+  const toggleDrawer = (): void => {
     setOpenMenu(!isOpenMenu);
   };
 
@@ -36,20 +35,11 @@ const Header = () => {
       <div className={styles.headerContainer}>
         <HeaderLogo />
 
-        <div className={styles.headerButtonsBlock}>
-          <button className={styles.headerButtonLang} onClick={handleLanguage}>
-            <ImEarth className={styles.headerButtonLangIcon} /> {t('lang')}
-          </button>
-          <div className={styles.headerBurger} onClick={toggleDrawer}>
-            {
-              <GiHamburgerMenu
-                className={`${styles.headerBurgerIcon} ${
-                  isOpenMenu && styles.active
-                }`}
-              />
-            }
-          </div>
-        </div>
+        <HeaderButtons
+          openMenu={toggleDrawer}
+          changeLang={handleLanguageQuery}
+          isOpen={isOpenMenu}
+        />
       </div>
 
       <HeaderNavigate openNavigate={isOpenMenu} setOpenMenu={setOpenMenu} />
