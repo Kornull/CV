@@ -11,7 +11,9 @@ import { LanguageQuery } from 'src/types';
 const Header = () => {
   const { i18n } = useTranslation();
   const [isOpenMenu, setOpenMenu] = useState<boolean>(false);
-  const [lang, setLang] = useState<string>(LanguageQuery.EN);
+  const [lang, setLang] = useState<string>(
+    localStorage.getItem(LanguageQuery.LANG) || LanguageQuery.EN
+  );
 
   const handleLanguageQuery = (): void => {
     if (lang === LanguageQuery.EN) {

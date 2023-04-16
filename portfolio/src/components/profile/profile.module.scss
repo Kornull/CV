@@ -2,28 +2,96 @@
 
 .profile {
   width: $width;
-  height: 100vh;
-  background: #000;
+  height: 460px;
+  background-color: $black;
+  background-image: url('public/bg-about.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+
+  @media (width <= $w980) {
+    height: $deg100;
+    min-height: 356px;
+  }
+
+  @media (width <= 580px) {
+    height: auto;
+    min-height: 300px;
+  }
 
   &Container {
     display: flex;
+    gap: 6px;
     width: $width;
     max-width: $max-width;
-    height: 100vh;
+    min-height: $deg100;
+    min-height: 460px;
     margin: 0 auto;
+    padding: 0 $size16;
+
+    @media (width <= $w980) {
+      min-height: 356px;
+    }
+
+    @media (width <= 580px) {
+      min-height: 300px;
+    }
   }
 
-  &Sammary {
+  &Summary {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60%;
-    height: 100vh;
+    width: 74%;
+    margin-bottom: $size20;
+
+    @media (width <= $w480) {
+      width: $deg100;
+    }
+
+    &Text {
+      position: relative;
+      z-index: 1;
+      color: $white;
+      font-size: $size22;
+      line-height: 1.4;
+      text-align: initial;
+      text-indent: $size16;
+      word-wrap: break-word;
+
+      @media (width <= $w1200) {
+        font-size: $size20;
+      }
+
+      @media (width <= $w980) {
+        padding-top: $size16;
+        font-size: $size16;
+        text-align: left;
+      }
+
+      &Button {
+        color: $button-text;
+        font-size: inherit;
+        text-transform: lowercase;
+      }
+    }
   }
 
   &Foto {
     position: relative;
-    height: 100vh;
+    width: 24%;
+    overflow: hidden;
+
+    &Img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: $deg100;
+    }
+
+    @media (width <= $w480) {
+      display: none;
+    }
   }
 }

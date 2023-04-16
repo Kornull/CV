@@ -1,8 +1,14 @@
 // size
 $width: 100%;
 $max-width: 1420px;
-$medium-width: 798px;
+$w1200: 1200px;
+$w980: 980px;
+$w798: 798px;
+$w480: 480px;
 $heigth-header: 60px;
+$deg100: 100%;
+
+// min-media
 
 // color
 $black: #000;
@@ -10,8 +16,12 @@ $white: #fff;
 $link-hover: rgb(238 255 0);
 $bg-color-header: #022f72;
 $active-header: #b1ffec;
+$button-text: #78ebfa;
 
 // fonts
 $nova-font: 'Nova Oval', cursive;
-$font18: 18px;
-$font20: 20px;
+$size10: 10px;
+$size16: 16px;
+$size18: 18px;
+$size20: 20px;
+$size22: 22px;
