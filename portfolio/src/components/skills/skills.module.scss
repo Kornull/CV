@@ -15,7 +15,15 @@
   &Marguee {
     display: flex;
     justify-content: space-around;
-    width: 100%;
     padding: 0 10px;
+    width: $deg70;
+    margin: 0 auto;
+
+    @media (max-width: $w798) {
+      width: $deg80;
+    }
+    @media (max-width: $w580) {
+      width: $deg100;
+    }
   }
 }
