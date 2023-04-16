@@ -1,5 +1,11 @@
+import Profile from 'src/components/profile';
+
 const MainPage = () => {
-  return <p>MainPage</p>;
+  return (
+    <>
+      <Profile />
+    </>
+  );
 };
 
 export default MainPage;

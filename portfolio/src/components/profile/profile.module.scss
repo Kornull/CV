@@ -1,0 +1,29 @@
+@import 'src/scss/default-styles.scss';
+
+.profile {
+  width: $width;
+  background: #000;
+  height: 100vh;
+
+  &Container {
+    display: flex;
+    width: $width;
+    max-width: $max-width;
+    height: 100vh;
+    margin: 0 auto;
+  }
+
+  &Sammary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    height: 100vh;
+  }
+
+  &Foto {
+    position: relative;
+    height: 100vh;
+  }
+}
