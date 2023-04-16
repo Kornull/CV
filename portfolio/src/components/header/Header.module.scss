@@ -40,7 +40,7 @@
     width: 50px;
     height: 30px;
     color: $white;
-    font-size: $font20;
+    font-size: $size20;
     text-align: center;
 
     &Icon {
@@ -99,7 +99,7 @@
       margin: 0 auto;
       padding: 10px;
 
-      @media (width <= $medium-width) {
+      @media (width <= $w798) {
         justify-content: start;
         margin-left: 32px;
       }
@@ -109,7 +109,7 @@
   &Navigate.show {
     height: 50px;
 
-    @media (width <= $medium-width) {
+    @media (width <= $w798) {
       height: 210px;
     }
   }
@@ -119,7 +119,7 @@
     flex-wrap: wrap;
     gap: 16px;
 
-    @media (width <= $medium-width) {
+    @media (width <= $w798) {
       flex-direction: column;
       justify-content: start;
     }
@@ -132,7 +132,7 @@
     align-items: center;
     color: $white;
     font-weight: 700;
-    font-size: $font18;
+    font-size: $size18;
     text-transform: capitalize;
     transition: color 0.3s ease-out;
 

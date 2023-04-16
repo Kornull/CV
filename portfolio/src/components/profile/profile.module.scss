@@ -10,8 +10,8 @@
   background-position: center;
   background-size: cover;
 
-  @media (width <= 980px) {
-    height: 100%;
+  @media (width <= $w980) {
+    height: $deg100;
     min-height: 356px;
   }
 
@@ -25,13 +25,13 @@
     display: flex;
     width: $width;
     max-width: $max-width;
-    min-height: 100%;
+    min-height: $deg100;
     margin: 0 auto;
     padding: 0 20px;
     min-height: 460px;
     gap: 6px;
 
-    @media (width <= 980px) {
+    @media (width <= $w980) {
       min-height: 356px;
     }
 
@@ -47,27 +47,27 @@
     width: 74%;
     margin-bottom: 20px;
 
-    @media (width <= 480px) {
-      width: 100%;
+    @media (width <= $w480) {
+      width: $deg100;
     }
 
     &Text {
       position: relative;
       z-index: 1;
       color: $white;
-      font-size: 22px;
+      font-size: $size22;
       line-height: 1.4;
       word-wrap: break-word;
       text-align: initial;
-      text-indent: 16px;
+      text-indent: $size16;
 
-      @media (width <= 1200px) {
+      @media (width <= $w1200) {
         font-size: 20px;
       }
 
-      @media (width <= 980px) {
-        padding-top: 16px;
-        font-size: 16px;
+      @media (width <= $w980) {
+        padding-top: $size16;
+        font-size: $size16;
         text-align: left;
       }
 
@@ -87,9 +87,9 @@
       position: absolute;
       bottom: 0;
       right: 0;
-      width: 100%;
+      width: $deg100;
     }
-    @media (width <= 480px) {
+    @media (width <= $w480) {
       display: none;
     }
   }
