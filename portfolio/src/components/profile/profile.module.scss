@@ -2,20 +2,20 @@
 
 .profile {
   width: $width;
-  height: 460px;
+  min-height: 460px;
   background-color: $black;
-  background-image: url('public/bg-about.jpg');
+  background-image: url('/public/bg-about.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
 
-  @media (width <= $w980) {
+  @media (max-width: $w980) {
     height: $deg100;
     min-height: 356px;
   }
 
-  @media (width <= 580px) {
+  @media (max-width: $w798) {
     height: auto;
     min-height: 300px;
   }
@@ -25,16 +25,16 @@
     gap: 6px;
     width: $width;
     max-width: $max-width;
-    min-height: $deg100;
+    height: auto;
     min-height: 460px;
     margin: 0 auto;
     padding: 0 $size16;
 
-    @media (width <= $w980) {
+    @media (max-width: $w980) {
       min-height: 356px;
     }
 
-    @media (width <= 580px) {
+    @media (max-width: $w580) {
       min-height: 300px;
     }
   }
@@ -44,9 +44,9 @@
     align-items: center;
     justify-content: center;
     width: 74%;
-    margin-bottom: $size20;
+    margin: $size20 0;
 
-    @media (width <= $w480) {
+    @media (max-width: $w480) {
       width: $deg100;
     }
 
@@ -60,11 +60,11 @@
       text-indent: $size16;
       word-wrap: break-word;
 
-      @media (width <= $w1200) {
+      @media (max-width: $w1200) {
         font-size: $size20;
       }
 
-      @media (width <= $w980) {
+      @media (max-width: $w980) {
         padding-top: $size16;
         font-size: $size16;
         text-align: left;
@@ -90,7 +90,7 @@
       width: $deg100;
     }
 
-    @media (width <= $w480) {
+    @media (max-width: $w480) {
       display: none;
     }
   }
