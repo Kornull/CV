@@ -1,4 +1,5 @@
 @import 'src/scss/default-styles';
+@import 'src/scss/mixins';
 
 .header {
   width: $width;
@@ -7,13 +8,12 @@
   box-shadow: 0 0 15px #1b0ab4b0;
 
   &Container {
+    @include container-width;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: $width;
-    max-width: $max-width;
     height: inherit;
-    margin: 0 auto;
     padding: 0 16px;
   }
 
