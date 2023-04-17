@@ -1,11 +1,11 @@
-import { dataProjects } from 'src/types';
+import { DataProjectsType } from 'src/types';
 
-export const projectsData: dataProjects = {
+export const projectsData: DataProjectsType = {
   projects: [
     {
       id: 'tracker',
       title: 'Project Tracker',
-      image: '/src/assets/imageProjects/tracker.png',
+      image: 'src/assets/imageProjects/tracker.png',
       link: 'https://kornull-project-tracker.netlify.app/',
       github: 'https://github.com/Kornull/Project-tracker',
       stack: [
@@ -21,7 +21,7 @@ export const projectsData: dataProjects = {
     {
       id: 'rick',
       title: 'Rick and Morty API',
-      image: '/src/assets/imageProjects/tracker.png',
+      image: 'src/assets/imageProjects/rick.png',
       link: 'https://kornull.netlify.app/',
       github: 'https://github.com/Kornull/Rick-and-Morty-React',
       stack: [

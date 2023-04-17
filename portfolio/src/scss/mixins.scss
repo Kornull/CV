@@ -4,6 +4,7 @@
   width: $deg100;
   max-width: $max-width;
   margin: 0 auto;
+  padding: $size24;
 }
 
 @mixin default-container {
@@ -26,4 +27,15 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@mixin after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: $deg100;
+  height: 4px;
+  background-color: $underline;
+  border-radius: $size16;
+  content: '';
 }

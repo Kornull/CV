@@ -56,13 +56,18 @@ export const HeaderNavigate = ({
             </Link>
           </li>
           <li>
-            <NavLink
-              to="/fd"
+            <Link
+              activeClass="tasks"
+              to="skills"
+              spy={true}
+              smooth={true}
+              offset={100}
+              duration={100}
               className={styles.headerLink}
               onClick={handleCloseMenu}
             >
               lorem
-            </NavLink>
+            </Link>
           </li>
           <li>
             <NavLink

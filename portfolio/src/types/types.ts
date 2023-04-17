@@ -4,10 +4,15 @@ export enum LanguageQuery {
   LANG = 'lang',
   BTN_MORE = 'buttons.more',
   BTN_CLOSE = 'buttons.close',
+  BTN_READ = 'buttons.read',
   ABOUT = 'about',
   ABOUT_FULL = 'about-full',
   SKILLS = 'skills',
+  STACK = 'stack',
   PROJECTS = 'projects',
+  DATA_PROJECT = 'projects-data',
+  DESCR = 'descr',
+  WORK = 'work',
 }
 
 export type ProjectType = {
@@ -19,6 +24,6 @@ export type ProjectType = {
   stack: string[];
 };
 
-export type dataProjects = {
+export type DataProjectsType = {
   projects: ProjectType[];
 };
