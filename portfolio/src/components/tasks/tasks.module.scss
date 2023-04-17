@@ -4,9 +4,7 @@
 .tasks {
   @include default-container;
 
-  background-color: #131212;
-  background-image: url('/src/assets/bg-tasks.jpg');
-  background-repeat: repeat;
+  @include default-background;
 
   &Container {
     @include container-width;

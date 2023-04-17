@@ -26,11 +26,9 @@
 }
 
 @mixin default-background {
-  background-color: black;
-  background-image: url('src/assets/bg-about.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-color: #131212;
+  background-image: url('/src/assets/bg-tasks.jpg');
+  background-repeat: repeat;
 }
 
 @mixin after {
