@@ -1,9 +1,10 @@
 {
   "lang": "ru",
   "about": "Hi, I am a Front-end developer. I have completed a course at the Rolling Scopes School. It wasn't an easy way, but I did it and I can say that it was cool. I did a lot of projects and gained a lot of knowledge. I met some interesting people and web development professionals. I tried my hand as a team leader in team development. Now it's time to move on and I'm looking for a company that will allow me to work with an interesting product and reach my full potential. ",
-  "about-full": "Hi, my name is Uladzimir and I am a front-end developer. I took a course at the Rolling Scopes School. It wasn't an easy way, but I did it and I can say that it was great. I did a lot of projects and gained a lot of knowledge. I met interesting people and web development professionals, and acted as a team leader of 3 people during the final assignment of the JavaScript course. During my studies I developed a lot of home projects, from pure HTML, CSS and JavaScript landing pages to SPA applications using React, Typescript. Now it's time to move on and I'm looking for a company that will allow me to work with an interesting product and reach my full potential. I have one year of experience in web application development (games, landing pages, SPA). Good knowledge of JavaScript basics allows me to learn new technologies quickly and add value to the team. My goal is to improve my skills in order to develop a quality and in-demand product. ",
+  "about-full": "Hi, my name's Uladzimir and I am a front-end developer. I took a course at the Rolling Scopes School. It wasn't an easy way, but I did it and I can say that it was great. I did a lot of projects and gained a lot of knowledge. I met interesting people and web development professionals, and acted as a team leader of 3 people during the final assignment of the JavaScript course. During my studies I developed a lot of home projects, from pure HTML, CSS and JavaScript landing pages to SPA applications using React, Typescript. Now it's time to move on and I'm looking for a company that will allow me to work with an interesting product and reach my full potential. I have one year of experience in web application development (games, landing pages, SPA). Good knowledge of JavaScript basics allows me to learn new technologies quickly and add value to the team. My goal is to improve my skills in order to develop a quality and in-demand product. ",
   "buttons": {
     "more": "more",
     "close": "close"
-  }
+  },
+  "skills": "skills"
 }

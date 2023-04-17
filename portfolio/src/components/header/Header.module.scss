@@ -1,19 +1,23 @@
 @import 'src/scss/default-styles';
+@import 'src/scss/mixins';
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
   width: $width;
   min-height: $heigth-header;
   background: $bg-color-header;
   box-shadow: 0 0 15px #1b0ab4b0;
 
   &Container {
+    @include container-width;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: $width;
-    max-width: $max-width;
     height: inherit;
-    margin: 0 auto;
     padding: 0 16px;
   }
 
@@ -87,18 +91,19 @@
     align-items: center;
     height: 0;
     overflow: hidden;
+    opacity: 0;
     transition: all 0.2s linear;
 
     &Container {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: $width;
+      width: $deg100;
       max-width: 1420px;
       margin: 0 auto;
       padding: 10px;
 
-      @media (width <= $w798) {
+      @media (max-width: $w798) {
         justify-content: start;
         margin-left: 32px;
       }
@@ -107,8 +112,9 @@
 
   &Navigate.show {
     height: 50px;
+    opacity: 1;
 
-    @media (width <= $w798) {
+    @media (max-width: $w798) {
       height: 210px;
     }
   }
@@ -116,9 +122,9 @@
   &Links {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: $size16;
 
-    @media (width <= $w798) {
+    @media (max-width: $w798) {
       flex-direction: column;
       justify-content: start;
     }

@@ -1,12 +1,12 @@
 import { ProfileSummary } from './profileSummary';
 
-import Image from '/public/foto.png';
+import Image from 'src/assets/foto.png';
 
 import styles from './profile.module.scss';
 
 const Profile = () => {
   return (
-    <div className={styles.profile}>
+    <div className={styles.profile} id={'summary'}>
       <div className={styles.profileContainer}>
         <ProfileSummary />
 

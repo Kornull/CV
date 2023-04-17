@@ -1,0 +1,7 @@
+@import './default-styles';
+
+@mixin container-width {
+  width: $deg100;
+  max-width: $max-width;
+  margin: 0 auto;
+}
