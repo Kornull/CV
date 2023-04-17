@@ -135,6 +135,7 @@
     @media (max-width: $w798) {
       flex-direction: column;
       justify-content: start;
+      width: $deg100;
     }
   }
 
@@ -143,6 +144,7 @@
     display: block;
     gap: 6px;
     align-items: center;
+    width: auto;
     color: $white;
     font-weight: 700;
     font-size: $size18;
@@ -153,7 +155,7 @@
       position: absolute;
       bottom: -2px;
       left: 0;
-      width: $width;
+      width: $deg90;
       height: 2px;
       background: $gold-light;
       opacity: 0;

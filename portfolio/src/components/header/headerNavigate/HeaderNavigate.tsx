@@ -53,7 +53,7 @@ export const HeaderNavigate = ({
               className={styles.headerLink}
               onClick={handleCloseMenu}
             >
-              lorem
+              projects
             </Link>
           </li>
           <li>
