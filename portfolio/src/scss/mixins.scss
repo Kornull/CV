@@ -5,3 +5,25 @@
   max-width: $max-width;
   margin: 0 auto;
 }
+
+@mixin default-container {
+  width: $deg100;
+  min-height: $w300;
+  padding-top: 50px;
+}
+
+@mixin title-block {
+  margin: 0 auto 50px;
+  font-size: $size24;
+  font-family: $merriweather-font;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+@mixin default-background {
+  background-color: black;
+  background-image: url('src/assets/bg-about.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

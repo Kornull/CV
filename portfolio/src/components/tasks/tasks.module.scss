@@ -1,0 +1,17 @@
+@import 'src/scss/default-styles';
+@import 'src/scss/mixins';
+
+.tasks {
+  @include default-container;
+  @include default-background;
+
+  &Container {
+    @include container-width;
+  }
+
+  &Title {
+    @include title-block;
+
+    color: $white;
+  }
+}
