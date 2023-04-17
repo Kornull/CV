@@ -4,6 +4,7 @@ export const projectsData: DataProjectsType = {
   projects: [
     {
       id: 'tracker',
+      tech: 'react',
       title: 'Project Tracker',
       image: 'src/assets/imageProjects/tracker.png',
       link: 'https://kornull-project-tracker.netlify.app/',
@@ -20,6 +21,7 @@ export const projectsData: DataProjectsType = {
     },
     {
       id: 'rick',
+      tech: 'react',
       title: 'Rick and Morty API',
       image: 'src/assets/imageProjects/rick.png',
       link: 'https://kornull.netlify.app/',

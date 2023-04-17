@@ -17,6 +17,7 @@ export enum LanguageQuery {
 
 export type ProjectType = {
   id: string;
+  tech: string;
   title: string;
   image: string;
   link: string;
