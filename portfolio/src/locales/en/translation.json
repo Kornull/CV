@@ -6,5 +6,17 @@
     "more": "more",
     "close": "close"
   },
-  "skills": "skills"
+  "skills": "skills",
+  "works-text": "I've implemented",
+  "projects": "projects",
+  "projects-data": {
+    "tracker": {
+      "descr": "Trello analogue",
+      "work": "registration, authorization, profile, localization(i18next), reusable form component, menu burger,header project styling(material Ui), application and backend deployment."
+    },
+    "rick": {
+      "descr": "SPA based on open API. Implemented: ",
+      "work": "API requests, get data to create cards, create cards by the user, searching by filters and parameters, searching by page, routing, pagination, component testing (RTL, Jest)"
+    }
+  }
 }
