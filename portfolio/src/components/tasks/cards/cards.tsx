@@ -24,8 +24,12 @@ export const Cards = () => {
   return (
     <>
       {cardsResult.length
-        ? cardsResult.map((card: ProjectType) => (
-            <div className={styles.card} key={card.id}>
+        ? cardsResult.map((card: ProjectType, i: number) => (
+            <div
+              className={styles.card}
+              key={card.id}
+              style={i % 2 === 0 ? { flexDirection: 'row-reverse' } : undefined}
+            >
               <div className={styles.cardImageBlock}>
                 <img
                   className={styles.cardImage}
@@ -33,39 +37,38 @@ export const Cards = () => {
                   alt=""
                 />
               </div>
-              <h3 className={styles.cardTitle}>&#35; {card.title}</h3>
               <div className={styles.cardDescription}>
-                <h2>
-                  {t(
-                    `${LanguageQuery.DATA_PROJECT}.${card.id}.${LanguageQuery.DESCR}`
-                  )}
-                </h2>
-                <p>
-                  {' '}
-                  {t(LanguageQuery.STACK)} : {card.stack.slice(0, 2).toString()}
-                </p>
-                <div className={styles.cardBtnBlock}>
-                  <button className={styles.cardButton}>
-                    {t(LanguageQuery.BTN_READ)}
-                  </button>
+                <h3 className={styles.cardTitle}>{card.title}</h3>
+                <div className={styles.cardText}>
+                  <h2>
+                    {t(
+                      `${LanguageQuery.DATA_PROJECT}.${card.id}.${LanguageQuery.DESCR}`
+                    )}
+                  </h2>
+                  <p>
+                    {t(LanguageQuery.STACK)} : {card.stack.join(', ')}.
+                    <button className={styles.cardButton}>
+                      {t(LanguageQuery.BTN_MORE)}
+                    </button>
+                  </p>
                 </div>
-              </div>
 
-              <div className={styles.cardLinks}>
-                <Link
-                  className={styles.cardLinksHref}
-                  target="_blank"
-                  to={card.link}
-                >
-                  link
-                </Link>
-                <Link
-                  className={styles.cardLinksHref}
-                  target="_blank"
-                  to={card.github}
-                >
-                  GitHub
-                </Link>
+                <div className={styles.cardLinks}>
+                  <Link
+                    className={styles.cardLinksHref}
+                    target="_blank"
+                    to={card.link}
+                  >
+                    Link
+                  </Link>
+                  <Link
+                    className={styles.cardLinksHref}
+                    target="_blank"
+                    to={card.github}
+                  >
+                    GitHub
+                  </Link>
+                </div>
               </div>
             </div>
           ))

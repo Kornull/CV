@@ -72,6 +72,10 @@
         color: $button-text;
         font-size: inherit;
         text-transform: lowercase;
+        transition: color 0.2s linear;
+        &:hover {
+          color: $button-hover;
+        }
       }
     }
   }

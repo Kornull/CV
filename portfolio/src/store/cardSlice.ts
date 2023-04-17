@@ -30,9 +30,13 @@ export const cardsSlice = createSlice({
   initialState,
   reducers: {
     setUpdateCards(state: CardState, action: PayloadAction<string>) {
-      state.cardsResult = state.cards.filter(
-        (card) => card.tech === action.payload
-      );
+      if (action.payload === 'all') {
+        state.cardsResult = state.cards;
+      } else {
+        state.cardsResult = state.cards.filter(
+          (card) => card.tech === action.payload
+        );
+      }
     },
   },
 });
