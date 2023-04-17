@@ -37,5 +37,23 @@ export const projectsData: DataProjectsType = {
         'Jest',
       ],
     },
+    {
+      id: 'rick',
+      tech: 'javascript',
+      title: 'Rick and Morty API',
+      image: 'src/assets/imageProjects/rick.png',
+      link: 'https://kornull.netlify.app/',
+      github: 'https://github.com/Kornull/Rick-and-Morty-React',
+      stack: [
+        'React',
+        'Typescript',
+        'Redux Toolkit',
+        'useContext',
+        'SCSS.modules',
+        'useForm',
+        'Unit-testing',
+        'Jest',
+      ],
+    },
   ],
 };
