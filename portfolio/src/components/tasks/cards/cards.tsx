@@ -1,14 +1,16 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
+import { TasksBtns } from '../tasksBtns';
 import { imageNewUrl } from 'src/components/helper';
 
-import { LanguageQuery, ProjectType } from 'src/types';
 import { useAppDispatch, useAppSelector } from 'src/store/hooks';
 import { setUpdateCards } from 'src/store/cardSlice';
 
+import { LanguageQuery, ProjectType } from 'src/types';
+
 import styles from './cards.module.scss';
-import { useEffect, useState } from 'react';
 
 export const Cards = () => {
   const { t } = useTranslation();
@@ -29,22 +31,11 @@ export const Cards = () => {
 
   return (
     <>
-      <div className={styles.category}>
-        {cardCategories.map((ctg) => (
-          <button
-            key={ctg}
-            className={styles.categoryBtns}
-            onClick={() => handleChageCategory(ctg)}
-            style={
-              tasks === ctg
-                ? { color: '#fff59b', textDecoration: 'underline' }
-                : undefined
-            }
-          >
-            {ctg}
-          </button>
-        ))}
-      </div>
+      <TasksBtns
+        handleChageCategory={handleChageCategory}
+        task={tasks}
+        category={cardCategories}
+      />
       {cardsResult.length
         ? cardsResult.map((card: ProjectType, i: number) => (
             <div

@@ -32,3 +32,31 @@
     }
   }
 }
+
+
+.category {
+  display: flex;
+  justify-content: space-around;
+  width: $deg100;
+  max-width: 400px;
+  margin: 0 auto;
+  color: $white;
+  font-weight: bold;
+  font-size: $size20;
+  font-family: $merriweather-font;
+
+  &Btns {
+    color: inherit;
+    font-size: inherit;
+
+    &:hover {
+      color: $gold-light;
+    }
+
+    @media (max-width: $w758) {
+      font-size: $size16;
+    }
+
+
+  }
+}
