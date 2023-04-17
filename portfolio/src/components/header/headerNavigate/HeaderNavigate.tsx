@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-
+import { Link, animateScroll as scroll } from 'react-scroll';
 import styles from '../Header.module.scss';
 import React from 'react';
 
@@ -14,6 +14,7 @@ export const HeaderNavigate = ({
 }: NavigateProps) => {
   const handleCloseMenu = (): void => {
     setOpenMenu(false);
+    scroll.scrollToTop();
   };
 
   return (
@@ -27,22 +28,32 @@ export const HeaderNavigate = ({
       <nav className={styles.headerNavigateContainer}>
         <ul className={styles.headerLinks}>
           <li>
-            <a
-              href="#summary"
+            <Link
+              activeClass="active"
+              to="summary"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={100}
               className={styles.headerLink}
               onClick={handleCloseMenu}
             >
               summary
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#skills"
+            <Link
+              activeClass="active"
+              to="skills"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={100}
               className={styles.headerLink}
               onClick={handleCloseMenu}
             >
               skills
-            </a>
+            </Link>
           </li>
           <li>
             <NavLink

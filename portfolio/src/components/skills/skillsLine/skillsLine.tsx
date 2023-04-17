@@ -5,6 +5,10 @@ import { skillNumberImgArray } from 'src/constants';
 import styles from '../skills.module.scss';
 
 export const SkillsLine = () => {
+  const imageNewUrl = (num: number): string => {
+    return new URL(`/src/assets/logo/${num}.png`, import.meta.url).href;
+  };
+
   return (
     <div className={styles.skillMarguee}>
       <Marquee speed={40} gradientWidth={120}>
@@ -12,7 +16,7 @@ export const SkillsLine = () => {
           <img
             key={num}
             className={styles.skillMargueeImg}
-            src={`logo/${num}.png`}
+            src={imageNewUrl(num)}
             alt=""
           />
         ))}
