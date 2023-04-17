@@ -10,11 +10,9 @@ const Tasks = () => {
   const { t } = useTranslation();
 
   return (
-    <div className={styles.tasks}>
+    <div className={styles.tasks} id="tasks">
       <div className={styles.tasksContainer}>
-        <h2 className={styles.tasksTitle} id="tasks">
-          {t(LanguageQuery.PROJECTS)}
-        </h2>
+        <h2 className={styles.tasksTitle}>{t(LanguageQuery.PROJECTS)}</h2>
 
         <div className={styles.tasksCardsBlock}>
           <Cards />

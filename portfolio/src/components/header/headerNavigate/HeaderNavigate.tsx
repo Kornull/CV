@@ -1,7 +1,8 @@
 import { NavLink } from 'react-router-dom';
-import { Link, animateScroll as scroll } from 'react-scroll';
+// import { Link, animateScroll as scroll } from 'react-scroll';
 import styles from '../Header.module.scss';
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 
 type NavigateProps = {
   openNavigate: boolean;
@@ -14,7 +15,6 @@ export const HeaderNavigate = ({
 }: NavigateProps) => {
   const handleCloseMenu = (): void => {
     setOpenMenu(false);
-    scroll.scrollToTop();
   };
 
   return (
@@ -29,12 +29,7 @@ export const HeaderNavigate = ({
         <ul className={styles.headerLinks}>
           <li>
             <Link
-              activeClass="active"
-              to="summary"
-              spy={true}
-              smooth={true}
-              offset={-50}
-              duration={100}
+              to="/#summary"
               className={styles.headerLink}
               onClick={handleCloseMenu}
             >
@@ -43,12 +38,8 @@ export const HeaderNavigate = ({
           </li>
           <li>
             <Link
-              activeClass="active"
-              to="skills"
-              spy={true}
+              to="/#skills"
               smooth={true}
-              offset={-50}
-              duration={100}
               className={styles.headerLink}
               onClick={handleCloseMenu}
             >
@@ -57,12 +48,8 @@ export const HeaderNavigate = ({
           </li>
           <li>
             <Link
-              activeClass="tasks"
-              to="skills"
-              spy={true}
+              to="/#tasks"
               smooth={true}
-              offset={100}
-              duration={100}
               className={styles.headerLink}
               onClick={handleCloseMenu}
             >

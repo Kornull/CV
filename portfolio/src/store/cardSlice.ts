@@ -8,6 +8,7 @@ import { ProjectType } from 'src/types';
 type CardState = {
   cards: ProjectType[];
   cardsResult: ProjectType[];
+  cardCategories: string[];
 };
 
 export const initialState: CardState = {
@@ -23,6 +24,7 @@ export const initialState: CardState = {
       stack: [],
     },
   ],
+  cardCategories: ['all'],
 };
 
 export const cardsSlice = createSlice({
@@ -37,6 +39,12 @@ export const cardsSlice = createSlice({
           (card) => card.tech === action.payload
         );
       }
+      state.cardCategories = [
+        ...new Set([
+          ...state.cardCategories,
+          ...state.cards.map((card) => card.tech),
+        ]),
+      ];
     },
   },
 });

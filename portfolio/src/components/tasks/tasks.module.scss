@@ -3,7 +3,10 @@
 
 .tasks {
   @include default-container;
-  @include default-background;
+
+  background-color: #131212;
+  background-image: url('/src/assets/bg-tasks.jpg');
+  background-repeat: repeat;
 
   &Container {
     @include container-width;
@@ -17,12 +20,15 @@
 
   &CardsBlock {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     gap: $size20;
     align-items: center;
     justify-content: space-around;
     width: $deg90;
     margin: 0 auto;
+
+    @media (max-width: $w580) {
+      width: $deg100;
+    }
   }
 }
-

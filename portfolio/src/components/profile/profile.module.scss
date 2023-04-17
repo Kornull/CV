@@ -69,12 +69,13 @@
       }
 
       &Button {
-        color: $button-text;
+        color: $gold-light;
         font-size: inherit;
         text-transform: lowercase;
         transition: color 0.2s linear;
+
         &:hover {
-          color: $button-hover;
+          color: $gold;
         }
       }
     }

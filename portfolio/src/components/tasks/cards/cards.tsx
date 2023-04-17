@@ -12,10 +12,16 @@ import { useEffect, useState } from 'react';
 
 export const Cards = () => {
   const { t } = useTranslation();
-  const [tasks, setTasks] = useState<string>('react');
+  const [tasks, setTasks] = useState<string>('all');
 
-  const { cardsResult } = useAppSelector((state) => state.cards);
+  const { cardsResult, cardCategories } = useAppSelector(
+    (state) => state.cards
+  );
   const dispatch = useAppDispatch();
+
+  const handleChageCategory = (ctg: string) => {
+    setTasks(ctg);
+  };
 
   useEffect(() => {
     dispatch(setUpdateCards(tasks));
@@ -23,6 +29,22 @@ export const Cards = () => {
 
   return (
     <>
+      <div className={styles.category}>
+        {cardCategories.map((ctg) => (
+          <button
+            key={ctg}
+            className={styles.categoryBtns}
+            onClick={() => handleChageCategory(ctg)}
+            style={
+              tasks === ctg
+                ? { color: '#fff59b', textDecoration: 'underline' }
+                : undefined
+            }
+          >
+            {ctg}
+          </button>
+        ))}
+      </div>
       {cardsResult.length
         ? cardsResult.map((card: ProjectType, i: number) => (
             <div

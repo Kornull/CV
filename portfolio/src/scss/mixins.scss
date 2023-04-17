@@ -5,6 +5,10 @@
   max-width: $max-width;
   margin: 0 auto;
   padding: $size24;
+
+  @media (max-width: $w580) {
+    padding: $size12;
+  }
 }
 
 @mixin default-container {
@@ -31,7 +35,7 @@
 
 @mixin after {
   position: absolute;
-  bottom: -4px;
+  bottom: -2px;
   left: 0;
   width: $deg100;
   height: 4px;

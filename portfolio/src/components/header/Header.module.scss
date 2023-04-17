@@ -9,7 +9,7 @@
   width: $width;
   min-height: $heigth-header;
   background: $bg-color-header;
-  box-shadow: 0 0 15px #1b0ab4b0;
+  box-shadow: 0 0 15px #030303;
 
   &Container {
     @include container-width;
@@ -19,6 +19,10 @@
     justify-content: space-between;
     height: inherit;
     padding: 0 16px;
+
+    @media (max-width: $w580) {
+      height: 40px;
+    }
   }
 
   &Logo {
@@ -46,10 +50,14 @@
     font-size: $size20;
     text-align: center;
 
+    &:hover {
+      color: $gold-light;
+    }
+
     &Icon {
       width: 20px;
       height: 24px;
-      color: $white;
+      color: inherit;
     }
   }
 
@@ -62,8 +70,7 @@
     transition: text-shadow 0.3s ease-out, color 0.3s ease-out;
 
     &:hover {
-      color: $active-header;
-      text-shadow: 0 0 8px $white;
+      color: $gold-light;
     }
   }
 
@@ -74,14 +81,14 @@
     padding: 6px;
 
     &Icon {
-      width: 60%;
-      height: 60%;
+      width: 30px;
+      height: 30px;
       color: $white;
       cursor: pointer;
       transition: width 0.23s ease-in, transform 0.3s ease-in;
 
       &:hover {
-        width: 70%;
+        color: $gold-light;
       }
     }
   }
@@ -123,6 +130,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: $size16;
+    cursor: pointer;
 
     @media (max-width: $w798) {
       flex-direction: column;
@@ -147,14 +155,14 @@
       left: 0;
       width: $width;
       height: 2px;
-      background: $active-header;
+      background: $gold-light;
       opacity: 0;
       transition: opacity 0.3s ease-out;
       content: '';
     }
 
     &:hover {
-      color: $active-header;
+      color: $gold-light;
 
       &::after {
         opacity: 1;
