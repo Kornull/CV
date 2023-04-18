@@ -35,15 +35,10 @@ export const cardsSlice = createSlice({
       if (action.payload === 'all') {
         state.cardsResult = state.cards;
       } else {
-        state.cardsResult = state.cards.filter(
-          (card) => card.tech === action.payload
-        );
+        state.cardsResult = state.cards.filter((card) => card.tech === action.payload);
       }
       state.cardCategories = [
-        ...new Set([
-          ...state.cardCategories,
-          ...state.cards.map((card) => card.tech),
-        ]),
+        ...new Set([...state.cardCategories, ...state.cards.map((card) => card.tech)]),
       ];
     },
   },
