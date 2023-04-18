@@ -9,30 +9,19 @@ type NavigateProps = {
   setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const HeaderNavigate = ({
-  openNavigate,
-  setOpenMenu,
-}: NavigateProps) => {
+export const HeaderNavigate = ({ openNavigate, setOpenMenu }: NavigateProps) => {
   const handleCloseMenu = (): void => {
     setOpenMenu(false);
   };
 
   return (
     <div
-      className={
-        openNavigate
-          ? `${styles.headerNavigate} ${styles.show}`
-          : styles.headerNavigate
-      }
+      className={openNavigate ? `${styles.headerNavigate} ${styles.show}` : styles.headerNavigate}
     >
       <nav className={styles.headerNavigateContainer}>
         <ul className={styles.headerLinks}>
           <li>
-            <Link
-              to="/#summary"
-              className={styles.headerLink}
-              onClick={handleCloseMenu}
-            >
+            <Link to="/#summary" className={styles.headerLink} onClick={handleCloseMenu}>
               summary
             </Link>
           </li>
@@ -57,20 +46,12 @@ export const HeaderNavigate = ({
             </Link>
           </li>
           <li>
-            <NavLink
-              to="/ff"
-              className={styles.headerLink}
-              onClick={handleCloseMenu}
-            >
+            <NavLink to="/ff" className={styles.headerLink} onClick={handleCloseMenu}>
               lorem
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/"
-              className={styles.headerLink}
-              onClick={handleCloseMenu}
-            >
+            <NavLink to="/" className={styles.headerLink} onClick={handleCloseMenu}>
               main
             </NavLink>
           </li>

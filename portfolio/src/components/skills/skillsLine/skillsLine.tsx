@@ -10,12 +10,7 @@ export const SkillsLine = () => {
     <div className={styles.skillMarguee}>
       <Marquee speed={40} gradientWidth={120}>
         {skillNumberImgArray.map((num) => (
-          <img
-            key={num}
-            className={styles.skillMargueeImg}
-            src={imageNewUrl(num)}
-            alt=""
-          />
+          <img key={num} className={styles.skillMargueeImg} src={imageNewUrl(num)} alt="" />
         ))}
       </Marquee>
     </div>

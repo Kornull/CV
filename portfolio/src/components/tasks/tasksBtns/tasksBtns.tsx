@@ -6,11 +6,7 @@ type BtnsProps = {
   handleChageCategory: (el: string) => void;
 };
 
-export const TasksBtns = ({
-  category,
-  task,
-  handleChageCategory,
-}: BtnsProps) => {
+export const TasksBtns = ({ category, task, handleChageCategory }: BtnsProps) => {
   return (
     <div className={styles.category}>
       {category.map((ctg) => (
@@ -18,11 +14,7 @@ export const TasksBtns = ({
           key={ctg}
           className={styles.categoryBtns}
           onClick={() => handleChageCategory(ctg)}
-          style={
-            task === ctg
-              ? { color: '#fff59b', textDecoration: 'underline' }
-              : undefined
-          }
+          style={task === ctg ? { color: '#fff59b', textDecoration: 'underline' } : undefined}
         >
           {ctg}
         </button>

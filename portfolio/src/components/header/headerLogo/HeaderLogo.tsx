@@ -8,11 +8,7 @@ type LogoProps = {
 
 export const HeaderLogo = ({ closeMenu }: LogoProps) => {
   return (
-    <NavLink
-      to="/"
-      className={styles.headerLogo}
-      onClick={() => closeMenu(false)}
-    >
+    <NavLink to="/" className={styles.headerLogo} onClick={() => closeMenu(false)}>
       <h1 className={styles.headerTitle}>KornUll</h1>
     </NavLink>
   );

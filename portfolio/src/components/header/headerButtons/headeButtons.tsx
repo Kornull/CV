@@ -12,11 +12,7 @@ type ButtonsProps = {
   changeLang: () => void;
 };
 
-export const HeaderButtons = ({
-  isOpen,
-  openMenu,
-  changeLang,
-}: ButtonsProps) => {
+export const HeaderButtons = ({ isOpen, openMenu, changeLang }: ButtonsProps) => {
   const { t } = useTranslation();
 
   return (
@@ -26,11 +22,7 @@ export const HeaderButtons = ({
         {t(LanguageQuery.LANG)}
       </button>
       <div className={styles.headerBurger} onClick={openMenu}>
-        {
-          <GiHamburgerMenu
-            className={`${styles.headerBurgerIcon} ${isOpen && styles.active}`}
-          />
-        }
+        {<GiHamburgerMenu className={`${styles.headerBurgerIcon} ${isOpen && styles.active}`} />}
       </div>
     </div>
   );
