@@ -10,16 +10,31 @@
   width: $deg100;
   height: 100vh;
   background: #ffffffbb;
-  z-index: 11;
   overflow: hidden;
   padding: 0 20px;
+  opacity: 0;
+  z-index: -1;
+
 
   &Content {
+    position: relative;
     width: $deg100;
     max-width: 600px;
     min-height: 50vh;
     background: $white;
     border-radius: 15px;
     box-shadow: 0 0 4px #0000009f;
+    transform: scale(0.3);
+    transition: all .3s linear;
   }
+}
+
+.activeModal {
+  z-index: 11;
+  opacity: 1;
+}
+
+.activeContent {
+  transform: scale(1);
+  opacity: 1;
 }

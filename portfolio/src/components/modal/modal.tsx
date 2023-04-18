@@ -21,8 +21,16 @@ const Modal = () => {
   }, [isOpenModal]);
 
   return (
-    <div className={styles.modal} onClick={handleCloseModal}>
-      <div className={styles.modalContent} onClick={(ev) => ev.stopPropagation()}></div>
+    <div
+      className={isOpenModal ? `${styles.modal} ${styles.activeModal}` : styles.modal}
+      onClick={handleCloseModal}
+    >
+      <div
+        className={
+          isOpenModal ? `${styles.modalContent} ${styles.activeContent}` : styles.modalContent
+        }
+        onClick={(ev) => ev.stopPropagation()}
+      ></div>
     </div>
   );
 };

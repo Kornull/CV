@@ -13,7 +13,7 @@ const Layout = () => {
       <main>
         <Outlet />
       </main>
-      {isOpenModal && <Modal />}
+      <Modal />
     </>
   );
 };
