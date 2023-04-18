@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-import { Cards } from './cards';
+import { TaskCard } from './tasksCard';
 
 import { LanguageQuery } from 'src/types';
 
@@ -15,7 +15,7 @@ const Tasks = () => {
         <h2 className={styles.tasksTitle}>{t(LanguageQuery.PROJECTS)}</h2>
 
         <div className={styles.tasksCardsBlock}>
-          <Cards />
+          <TaskCard />
         </div>
       </div>
     </div>

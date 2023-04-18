@@ -6,26 +6,30 @@ import { TasksBtns } from '../tasksBtns';
 import { imageNewUrl } from 'src/components/helper';
 
 import { useAppDispatch, useAppSelector } from 'src/store/hooks';
-import { setUpdateCards } from 'src/store/cardSlice';
+import { setUpdateCards, setOpenModal } from 'src/store/cardSlice';
 
 import { LanguageQuery, ProjectType } from 'src/types';
 
-import styles from './cards.module.scss';
+import styles from './taskCcard.module.scss';
 
-export const Cards = () => {
+export const TaskCard = () => {
   const { t } = useTranslation();
   const [tasks, setTasks] = useState<string>('all');
 
-  const { cardsResult, cardCategories } = useAppSelector((state) => state.cards);
+  const { cardsResult, cardCategories, isOpenModal } = useAppSelector((state) => state.cards);
   const dispatch = useAppDispatch();
 
   const handleChageCategory = (ctg: string) => {
     setTasks(ctg);
   };
 
+  const handleSetOpenModal = () => {
+    dispatch(setOpenModal(!isOpenModal));
+  };
+
   useEffect(() => {
     dispatch(setUpdateCards(tasks));
-  }, [tasks]);
+  }, [dispatch, tasks]);
 
   return (
     <>
@@ -48,7 +52,9 @@ export const Cards = () => {
                   <h2>{t(`${LanguageQuery.DATA_PROJECT}.${card.id}.${LanguageQuery.DESCR}`)}</h2>
                   <p>
                     {t(LanguageQuery.STACK)} : {card.stack.join(', ')}.
-                    <button className={styles.cardButton}>{t(LanguageQuery.BTN_MORE)}</button>
+                    <button className={styles.cardButton} onClick={handleSetOpenModal}>
+                      {t(LanguageQuery.BTN_MORE)}
+                    </button>
                   </p>
                 </div>
 
