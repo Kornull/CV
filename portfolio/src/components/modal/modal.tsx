@@ -2,7 +2,7 @@ import { useAppDispatch, useAppSelector } from 'src/store/hooks';
 
 import styles from './modal.module.scss';
 import { setOpenModal } from 'src/store/cardSlice';
-import { FormEvent, useEffect } from 'react';
+import { useEffect } from 'react';
 
 const Modal = () => {
   const { isOpenModal } = useAppSelector((state) => state.cards);
