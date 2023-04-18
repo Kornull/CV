@@ -33,7 +33,7 @@
 
 @mixin after {
   position: absolute;
-  bottom: -2px;
+  bottom: 0;
   left: 0;
   width: $deg100;
   height: 4px;
