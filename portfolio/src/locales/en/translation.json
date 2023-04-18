@@ -7,8 +7,8 @@
     "close": "close"
   },
   "skills": "skills",
-  "stack": "Stack",
-  "works-text": "I've implemented",
+  "stack": "Stack: ",
+  "work-title": "I've implemented: ",
   "projects": "projects",
   "projects-data": {
     "tracker": {

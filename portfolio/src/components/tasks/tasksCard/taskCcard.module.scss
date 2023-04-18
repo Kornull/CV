@@ -83,7 +83,7 @@
     height: 120px;
     margin-bottom: 12px;
     color: $white;
-    font-size: $size16;
+    font-size: $size18;
     line-height: 1.4;
 
     @media (max-width: $w758) {
@@ -112,35 +112,4 @@
     }
   }
 
-  &Links {
-    display: flex;
-    justify-content: space-between;
-    width: $deg50;
-    color: $gold-light;
-    font-size: inherit;
-
-    &Href {
-      position: relative;
-      color: inherit;
-      font-size: inherit;
-      text-transform: uppercase;
-
-      &::after {
-        @include after;
-
-        height: 2px;
-        opacity: 0;
-        transition: all 0.2s linear;
-      }
-
-      &:hover {
-        color: $gold;
-
-        &::after {
-          background-color: $gold;
-          opacity: 1;
-        }
-      }
-    }
-  }
 }

@@ -7,8 +7,8 @@
     "close": "скрыть"
   },
   "skills": "навыки",
-  "stack": "Стэк",
-  "works-text": "Мною реализовано",
+  "stack": "Стэк: ",
+  "work-title": "Мною реализовано: ",
   "projects": "проекты",
   "projects-data": {
     "tracker": {

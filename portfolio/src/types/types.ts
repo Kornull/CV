@@ -13,6 +13,7 @@ export enum LanguageQuery {
   DATA_PROJECT = 'projects-data',
   DESCR = 'descr',
   WORK = 'work',
+  WORK_TEXT = 'work-title',
 }
 
 export type ProjectType = {

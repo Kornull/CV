@@ -11,6 +11,7 @@ type CardState = {
   cardCategories: string[];
   isOpenModal: boolean;
   isOpenHeader: boolean;
+  cardDescr: ProjectType | null;
 };
 
 export const initialState: CardState = {
@@ -29,6 +30,15 @@ export const initialState: CardState = {
   cardCategories: ['all'],
   isOpenModal: false,
   isOpenHeader: false,
+  cardDescr: {
+    id: 'store',
+    tech: 'typescript',
+    title: 'Online store',
+    image: 'src/assets/imageProjects/store.webp',
+    link: 'https://kornull.github.io/Online-store/store/',
+    github: 'https://github.com/Kornull/Online-store',
+    stack: ['Typescript', 'Webpack', 'SCSS', 'LocalStorage', 'noUiSlider'],
+  },
 };
 
 export const cardsSlice = createSlice({
@@ -48,8 +58,12 @@ export const cardsSlice = createSlice({
     setOpenModal(state: CardState, action: PayloadAction<boolean>) {
       state.isOpenModal = action.payload;
     },
+
+    setDescrCard(state: CardState, action: PayloadAction<ProjectType>) {
+      state.cardDescr = action.payload;
+    },
   },
 });
 
-export const { setUpdateCards, setOpenModal } = cardsSlice.actions;
+export const { setUpdateCards, setOpenModal, setDescrCard } = cardsSlice.actions;
 export default cardsSlice.reducer;

@@ -1,40 +1,109 @@
-@import 'src/scss/default-styles.scss';
+@import 'src/scss/default-styles';
+@import 'src/scss/mixins';
 
 .modal {
   position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 0;
-  left: 0;
   width: $deg100;
   height: 100vh;
-  background: #ffffffbb;
-  overflow: hidden;
   padding: 0 20px;
+  overflow: hidden;
+  background: #222121bb;
   opacity: 0;
-  z-index: -1;
-
 
   &Content {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: $deg100;
-    max-width: 600px;
-    min-height: 50vh;
-    background: $white;
+    max-width: 800px;
+    min-height: 30vh;
+    max-height: 70vh;
+    padding: 10px;
+    overflow: hidden;
+    background: $black;
     border-radius: 15px;
-    box-shadow: 0 0 4px #0000009f;
+    box-shadow: 0 0 6px #fffc;
     transform: scale(0.3);
-    transition: all .3s linear;
+    transition: all 0.3s linear;
+  }
+
+  &ImgBlock {
+    width: $deg100;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+
+    @media (max-width: $w980) {
+      height: 100px;
+    }
+
+    @media (max-width: $w580) {
+      display: none;
+    }
+  }
+
+  &Description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: $deg100;
+    height: auto;
+    padding: 10px;
+    font-size: $size18;
+    line-height: 1.4;
+    overflow: auto;
+
+    &Title {
+      @include title-block;
+
+      position: relative;
+      margin-bottom: 8px;
+      color: $gold-light;
+      font-size: $size20;
+
+
+      &::after {
+        @include after;
+
+        bottom: -2px;
+        height: 2px;
+        background-color: $gold-light;
+      }
+
+      &Block {
+        color: $gold-light;
+        font-weight: 500;
+      }
+    }
+
+    &Text {
+      color: #80fbff;
+    }
+
+    &Links {
+      width: $deg90;
+      margin: 0 auto;
+
+      &:first-child {
+        width: 100px;
+      }
+    }
   }
 }
 
-.activeModal {
+.active-modal {
   z-index: 11;
   opacity: 1;
 }
 
-.activeContent {
+.active-content {
   transform: scale(1);
   opacity: 1;
 }

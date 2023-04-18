@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import { TasksBtns } from '../tasksBtns';
 import { imageNewUrl } from 'src/components/helper';
 
 import { useAppDispatch, useAppSelector } from 'src/store/hooks';
-import { setUpdateCards, setOpenModal } from 'src/store/cardSlice';
+import { setUpdateCards, setOpenModal, setDescrCard } from 'src/store/cardSlice';
 
 import { LanguageQuery, ProjectType } from 'src/types';
 
 import styles from './taskCcard.module.scss';
+import LinksBlock from 'src/components/linksBlock/linksBlock';
 
 export const TaskCard = () => {
   const { t } = useTranslation();
@@ -23,7 +23,8 @@ export const TaskCard = () => {
     setTasks(ctg);
   };
 
-  const handleSetOpenModal = () => {
+  const handleSetOpenModal = (card: ProjectType) => {
+    dispatch(setDescrCard(card));
     dispatch(setOpenModal(!isOpenModal));
   };
 
@@ -52,20 +53,12 @@ export const TaskCard = () => {
                   <h2>{t(`${LanguageQuery.DATA_PROJECT}.${card.id}.${LanguageQuery.DESCR}`)}</h2>
                   <p>
                     {t(LanguageQuery.STACK)} : {card.stack.join(', ')}.
-                    <button className={styles.cardButton} onClick={handleSetOpenModal}>
+                    <button className={styles.cardButton} onClick={() => handleSetOpenModal(card)}>
                       {t(LanguageQuery.BTN_MORE)}
                     </button>
                   </p>
                 </div>
-
-                <div className={styles.cardLinks}>
-                  <Link className={styles.cardLinksHref} target="_blank" to={card.link}>
-                    Link
-                  </Link>
-                  <Link className={styles.cardLinksHref} target="_blank" to={card.github}>
-                    GitHub
-                  </Link>
-                </div>
+                <LinksBlock deploy={card.link} github={card.github} />
               </div>
             </div>
           ))
