@@ -18,7 +18,7 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <div className={styles.footer}>
+    <div className={styles.footer} id="contacts">
       <div className={styles.footerContainer}>
         <div className={styles.footerDescription}>
           <h2 className={styles.footerTitle}>{t(LanguageQuery.CONTACTS)}</h2>

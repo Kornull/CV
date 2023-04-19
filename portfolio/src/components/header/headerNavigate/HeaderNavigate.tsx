@@ -1,8 +1,10 @@
-import { NavLink } from 'react-router-dom';
-// import { Link, animateScroll as scroll } from 'react-scroll';
-import styles from '../Header.module.scss';
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
+import { useTranslation } from 'react-i18next';
+
+import styles from '../Header.module.scss';
+import { LanguageQuery } from 'src/types';
 
 type NavigateProps = {
   openNavigate: boolean;
@@ -10,6 +12,8 @@ type NavigateProps = {
 };
 
 export const HeaderNavigate = ({ openNavigate, setOpenMenu }: NavigateProps) => {
+  const { t } = useTranslation();
+
   const handleCloseMenu = (): void => {
     setOpenMenu(false);
   };
@@ -22,7 +26,7 @@ export const HeaderNavigate = ({ openNavigate, setOpenMenu }: NavigateProps) => 
         <ul className={styles.headerLinks}>
           <li>
             <Link to="/#summary" className={styles.headerLink} onClick={handleCloseMenu}>
-              summary
+              {t(LanguageQuery.SUMMARU)}
             </Link>
           </li>
           <li>
@@ -32,7 +36,7 @@ export const HeaderNavigate = ({ openNavigate, setOpenMenu }: NavigateProps) => 
               className={styles.headerLink}
               onClick={handleCloseMenu}
             >
-              skills
+              {t(LanguageQuery.SKILLS)}
             </Link>
           </li>
           <li>
@@ -42,13 +46,13 @@ export const HeaderNavigate = ({ openNavigate, setOpenMenu }: NavigateProps) => 
               className={styles.headerLink}
               onClick={handleCloseMenu}
             >
-              projects
+              {t(LanguageQuery.PROJECTS)}
             </Link>
           </li>
           <li>
-            <NavLink to="/ff" className={styles.headerLink} onClick={handleCloseMenu}>
-              lorem
-            </NavLink>
+            <Link to="/#contacts" className={styles.headerLink} onClick={handleCloseMenu}>
+              {t(LanguageQuery.CONTACTS)}
+            </Link>
           </li>
           <li>
             <NavLink to="/" className={styles.headerLink} onClick={handleCloseMenu}>
