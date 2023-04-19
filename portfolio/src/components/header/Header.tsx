@@ -5,8 +5,9 @@ import { HeaderLogo } from './headerLogo';
 import { HeaderNavigate } from './headerNavigate';
 import { HeaderButtons } from './headerButtons';
 
-import styles from './Header.module.scss';
 import { LanguageQuery } from 'src/types';
+
+import styles from './Header.module.scss';
 
 const Header = () => {
   const { i18n } = useTranslation();

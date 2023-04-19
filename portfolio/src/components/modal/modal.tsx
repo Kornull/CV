@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from 'src/store/hooks';
+import { useAppDispatch, useAppSelector, setOpenModal } from 'src/store';
 import { useTranslation } from 'react-i18next';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
-import { setOpenModal } from 'src/store/cardSlice';
 
 import { imageNewUrl } from '../helper';
 import LinksBlock from '../linksBlock/linksBlock';
@@ -64,6 +63,7 @@ const Modal = () => {
                 {t(`${LanguageQuery.DATA_PROJECT}.${cardDescr.id}.${LanguageQuery.WORK}`)}
               </article>
             </div>
+
             <div className={styles.modalDescriptionLinks}>
               <LinksBlock deploy={cardDescr.link} github={cardDescr.github} />
             </div>

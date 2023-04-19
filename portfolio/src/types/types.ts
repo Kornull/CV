@@ -8,12 +8,15 @@ export enum LanguageQuery {
   ABOUT = 'about',
   ABOUT_FULL = 'about-full',
   SKILLS = 'skills',
+  SUMMARU = 'summary',
   STACK = 'stack',
   PROJECTS = 'projects',
   DATA_PROJECT = 'projects-data',
   DESCR = 'descr',
   WORK = 'work',
   WORK_TEXT = 'work-title',
+  CONTACTS = 'contacts',
+  PAGES = 'pages',
 }
 
 export type ProjectType = {
