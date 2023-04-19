@@ -10,8 +10,9 @@ import {
 } from 'react-icons/bs';
 import { GrMail } from 'react-icons/gr';
 
-import styles from './footer.module.scss';
 import { LanguageQuery } from 'src/types';
+
+import styles from './footer.module.scss';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -57,6 +58,7 @@ const Footer = () => {
               <Link
                 className={styles.footerLink}
                 to="https://www.linkedin.com/in/uladzimir-karnialiuk/"
+                target="_blank"
               >
                 {'/uladzimir-karnialiuk'}
               </Link>
@@ -64,14 +66,14 @@ const Footer = () => {
 
             <li className={styles.footerListItem}>
               <BsGithub className={styles.footerListIcon} />
-              <Link className={styles.footerLink} to="https://github.com/Kornull">
+              <Link className={styles.footerLink} to="https://github.com/Kornull" target="_blank">
                 Kornull
               </Link>
             </li>
 
             <li className={styles.footerListItem}>
               <BsFillFileEarmarkMedicalFill className={styles.footerListIcon} />
-              <Link className={styles.footerLink} to="#">
+              <Link className={styles.footerLink} to="#" target="_blank">
                 resume
               </Link>
             </li>
