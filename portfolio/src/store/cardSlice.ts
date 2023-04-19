@@ -28,7 +28,7 @@ export const initialState: CardState = {
     },
   ],
   cardCategories: ['all'],
-  isOpenModal: false,
+  isOpenModal: true,
   isOpenHeader: false,
   cardDescr: {
     id: 'store',

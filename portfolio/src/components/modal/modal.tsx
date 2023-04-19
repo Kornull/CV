@@ -1,12 +1,15 @@
+import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from 'src/store/hooks';
+import { useTranslation } from 'react-i18next';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
+import { setOpenModal } from 'src/store/cardSlice';
+
+import { imageNewUrl } from '../helper';
+import LinksBlock from '../linksBlock/linksBlock';
+
+import { LanguageQuery } from 'src/types';
 
 import styles from './modal.module.scss';
-import { setOpenModal } from 'src/store/cardSlice';
-import { useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import { imageNewUrl } from '../helper';
-import { LanguageQuery } from 'src/types';
-import LinksBlock from '../linksBlock/linksBlock';
 
 const Modal = () => {
   const { t } = useTranslation();
@@ -66,6 +69,9 @@ const Modal = () => {
             </div>
           </>
         )}
+        <button className={styles.modalClose} onClick={handleCloseModal}>
+          <AiOutlineCloseCircle className={styles.modalCloseIcon} />
+        </button>
       </div>
     </div>
   );
