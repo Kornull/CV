@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 
 import Header from '../header';
 import Modal from '../modal/modal';
-import Footer from '../footer';
+import Shadow from '../shadow/shadow';
 
 const Layout = () => {
   return (
@@ -11,8 +11,8 @@ const Layout = () => {
       <main>
         <Outlet />
       </main>
-      <Footer />
       <Modal />
+      <Shadow />
     </>
   );
 };

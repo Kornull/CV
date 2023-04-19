@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { HeaderLogo } from './headerLogo';
 import { HeaderNavigate } from './headerNavigate';
 import { HeaderButtons } from './headerButtons';
+import { setOpenMenu, useAppDispatch } from 'src/store';
 
 import { LanguageQuery } from 'src/types';
 
@@ -13,7 +14,7 @@ const Header = () => {
   const langResult: string = localStorage.getItem(LanguageQuery.LANG) || LanguageQuery.EN;
 
   const { i18n } = useTranslation();
-  const [isOpenMenu, setOpenMenu] = useState<boolean>(false);
+  const dispatch = useAppDispatch();
   const [lang, setLang] = useState<string>(langResult);
 
   const handleLanguageQuery = (): void => {
@@ -27,26 +28,18 @@ const Header = () => {
       setLang(LanguageQuery.EN);
       localStorage.setItem(LanguageQuery.LANG, LanguageQuery.EN);
     }
-    setOpenMenu(false);
-  };
-
-  const toggleDrawer = (): void => {
-    setOpenMenu(!isOpenMenu);
+    dispatch(setOpenMenu(false));
   };
 
   return (
     <header className={styles.header}>
       <div className={styles.headerContainer}>
-        <HeaderLogo closeMenu={setOpenMenu} />
+        <HeaderLogo />
 
-        <HeaderButtons
-          openMenu={toggleDrawer}
-          changeLang={handleLanguageQuery}
-          isOpen={isOpenMenu}
-        />
+        <HeaderButtons changeLang={handleLanguageQuery} />
       </div>
 
-      <HeaderNavigate openNavigate={isOpenMenu} setOpenMenu={setOpenMenu} />
+      <HeaderNavigate />
     </header>
   );
 };

@@ -14,7 +14,7 @@ type CardState = {
   cardsResult: ProjectType[];
   cardCategories: string[];
   isOpenModal: boolean;
-  isOpenHeader: boolean;
+  isOpenNavigate: boolean;
   cardDescr: ProjectType | null;
 };
 
@@ -33,7 +33,7 @@ export const initialState: CardState = {
   ],
   cardCategories: ['all'],
   isOpenModal: false,
-  isOpenHeader: false,
+  isOpenNavigate: false,
   cardDescr: null,
 };
 
@@ -54,12 +54,14 @@ export const cardsSlice = createSlice({
     setOpenModal(state: CardState, action: PayloadAction<boolean>) {
       state.isOpenModal = action.payload;
     },
-
+    setOpenMenu(state: CardState, action: PayloadAction<boolean>) {
+      state.isOpenNavigate = action.payload;
+    },
     setDescrCard(state: CardState, action: PayloadAction<ProjectType>) {
       state.cardDescr = action.payload;
     },
   },
 });
 
-export const { setUpdateCards, setOpenModal, setDescrCard } = cardsSlice.actions;
+export const { setUpdateCards, setOpenModal, setDescrCard, setOpenMenu } = cardsSlice.actions;
 export default cardsSlice.reducer;

@@ -1,26 +1,24 @@
-import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import { useTranslation } from 'react-i18next';
 
 import { LanguageQuery } from 'src/types';
 
+import { useAppSelector, useAppDispatch, setOpenMenu } from 'src/store';
+
 import styles from '../header.module.scss';
 
-type NavigateProps = {
-  openNavigate: boolean;
-  setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
-export const HeaderNavigate = ({ openNavigate, setOpenMenu }: NavigateProps) => {
+export const HeaderNavigate = () => {
   const { t } = useTranslation();
+  const { isOpenNavigate } = useAppSelector((state) => state.cards);
+  const dispatch = useAppDispatch();
 
   const handleCloseMenu = (): void => {
-    setOpenMenu(false);
+    dispatch(setOpenMenu(false));
   };
 
   return (
     <div
-      className={openNavigate ? `${styles.headerNavigate} ${styles.show}` : styles.headerNavigate}
+      className={isOpenNavigate ? `${styles.headerNavigate} ${styles.show}` : styles.headerNavigate}
     >
       <nav className={styles.headerNavigateContainer}>
         <ul className={styles.headerLinks}>
