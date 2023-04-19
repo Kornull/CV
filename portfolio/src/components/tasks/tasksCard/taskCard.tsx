@@ -4,13 +4,18 @@ import { useTranslation } from 'react-i18next';
 import { TasksBtns } from '../tasksBtns';
 import { imageNewUrl } from 'src/components/helper';
 
-import { useAppDispatch, useAppSelector } from 'src/store/hooks';
-import { setUpdateCards, setOpenModal, setDescrCard } from 'src/store/cardSlice';
+import {
+  useAppDispatch,
+  useAppSelector,
+  setUpdateCards,
+  setOpenModal,
+  setDescrCard,
+} from 'src/store';
 
 import { LanguageQuery, ProjectType } from 'src/types';
 
 import styles from './taskCcard.module.scss';
-import LinksBlock from 'src/components/linksBlock/linksBlock';
+import LinksBlock from 'src/components/linksBlock';
 
 export const TaskCard = () => {
   const { t } = useTranslation();
