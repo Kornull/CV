@@ -28,17 +28,9 @@ export const initialState: CardState = {
     },
   ],
   cardCategories: ['all'],
-  isOpenModal: true,
+  isOpenModal: false,
   isOpenHeader: false,
-  cardDescr: {
-    id: 'store',
-    tech: 'typescript',
-    title: 'Online store',
-    image: 'src/assets/imageProjects/store.webp',
-    link: 'https://kornull.github.io/Online-store/store/',
-    github: 'https://github.com/Kornull/Online-store',
-    stack: ['Typescript', 'Webpack', 'SCSS', 'LocalStorage', 'noUiSlider'],
-  },
+  cardDescr: null,
 };
 
 export const cardsSlice = createSlice({
