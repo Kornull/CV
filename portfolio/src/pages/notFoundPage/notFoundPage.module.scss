@@ -1,0 +1,44 @@
+@import 'src/scss/default-styles';
+@import 'src/scss/mixins';
+
+.not {
+  display: flex;
+  align-items: center;
+  width: $deg100;
+  height: 100vh;
+  padding: $size16;
+  background: $white;
+
+  &Block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: $deg80;
+    height: auto;
+    margin: 0 auto;
+
+
+    &Title {
+      @include title-block;
+      width: $deg100;
+      max-width: 800px;
+    }
+
+    &Text {
+      font-size: $size24;
+      font-weight: 500;
+    }
+
+    &Link {
+      font-size: $size24;
+      font-weight: bold;
+      color: red;
+      transition: color 0.3s ease-out;
+
+      &:hover {
+        color: blue;
+      }
+    }
+  }
+}

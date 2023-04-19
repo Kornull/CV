@@ -17,6 +17,8 @@ export enum LanguageQuery {
   WORK_TEXT = 'work-title',
   CONTACTS = 'contacts',
   PAGES = 'pages',
+  NOT = 'not',
+  HERE = 'here',
 }
 
 export enum LocalStore {
