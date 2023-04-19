@@ -24,7 +24,7 @@ export const TaskCard = () => {
   const { cardsResult, cardCategories, isOpenModal } = useAppSelector((state) => state.cards);
   const dispatch = useAppDispatch();
 
-  const handleChageCategory = (ctg: string) => {
+  const handleChangeCategory = (ctg: string) => {
     setTasks(ctg);
   };
 
@@ -33,13 +33,23 @@ export const TaskCard = () => {
     dispatch(setOpenModal(!isOpenModal));
   };
 
+  const setLineCheck = (strArr: string[]): string => {
+    const str = strArr.join(', ');
+    if (str.length > 90) return `${str.slice(0, 90)} ...`;
+    return `${str}.`;
+  };
+
   useEffect(() => {
     dispatch(setUpdateCards(tasks));
   }, [dispatch, tasks]);
 
   return (
     <>
-      <TasksBtns handleChageCategory={handleChageCategory} task={tasks} category={cardCategories} />
+      <TasksBtns
+        handleChangeCategory={handleChangeCategory}
+        task={tasks}
+        category={cardCategories}
+      />
       {cardsResult.length
         ? cardsResult.map((card: ProjectType, i: number) => (
             <div
@@ -57,7 +67,7 @@ export const TaskCard = () => {
                 <div className={styles.cardText}>
                   <h2>{t(`${LanguageQuery.DATA_PROJECT}.${card.id}.${LanguageQuery.DESCR}`)}</h2>
                   <p>
-                    {t(LanguageQuery.STACK)} : {card.stack.join(', ')}.
+                    {t(LanguageQuery.STACK)} : {setLineCheck(card.stack)}
                     <button className={styles.cardButton} onClick={() => handleSetOpenModal(card)}>
                       {t(LanguageQuery.BTN_MORE)}
                     </button>

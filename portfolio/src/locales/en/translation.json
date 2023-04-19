@@ -9,7 +9,7 @@
   "contacts": "contacts",
   "pages": "pages",
   "skills": "skills",
-  "summary":"summary",
+  "summary": "summary",
   "stack": "Stack: ",
   "work-title": "I've implemented: ",
   "projects": "projects",
@@ -45,6 +45,10 @@
     "photo": {
       "descr": "Photographer's website",
       "work": "burger menu, dark / light theme, custom localisation, card loading by category, mobile version."
+    },
+    "cv": {
+      "descr": "Portfolio",
+      "work": "burger menu, page navigation, get and save data in state, card drawing, modal window, localisation, routing, infinite carousel, 404 page, website view from 320 pixel resolution (mobile version)"
     }
   }
 }

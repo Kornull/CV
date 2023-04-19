@@ -1,10 +1,10 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 import { useTranslation } from 'react-i18next';
 
-import styles from '../Header.module.scss';
 import { LanguageQuery } from 'src/types';
+
+import styles from '../Header.module.scss';
 
 type NavigateProps = {
   openNavigate: boolean;
@@ -53,11 +53,6 @@ export const HeaderNavigate = ({ openNavigate, setOpenMenu }: NavigateProps) => 
             <Link to="/#contacts" className={styles.headerLink} onClick={handleCloseMenu}>
               {t(LanguageQuery.CONTACTS)}
             </Link>
-          </li>
-          <li>
-            <NavLink to="/" className={styles.headerLink} onClick={handleCloseMenu}>
-              main
-            </NavLink>
           </li>
         </ul>
       </nav>
