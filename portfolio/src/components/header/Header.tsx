@@ -10,11 +10,11 @@ import { LanguageQuery } from 'src/types';
 import styles from './Header.module.scss';
 
 const Header = () => {
+  const langResult: string = localStorage.getItem(LanguageQuery.LANG) || LanguageQuery.EN;
+
   const { i18n } = useTranslation();
   const [isOpenMenu, setOpenMenu] = useState<boolean>(false);
-  const [lang, setLang] = useState<string>(
-    localStorage.getItem(LanguageQuery.LANG) || LanguageQuery.EN
-  );
+  const [lang, setLang] = useState<string>(langResult);
 
   const handleLanguageQuery = (): void => {
     if (lang === LanguageQuery.EN) {

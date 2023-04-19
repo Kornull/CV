@@ -9,6 +9,7 @@ import styles from './skills.module.scss';
 
 const Skills = () => {
   const { t } = useTranslation();
+
   return (
     <div className={styles.skill} id={'skills'}>
       <div className={styles.skillContainer}>

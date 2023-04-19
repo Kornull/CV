@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { TasksBtns } from '../tasksBtns';
 import { imageNewUrl } from 'src/components/helper';
+import LinksBlock from 'src/components/linksBlock';
 
 import {
   useAppDispatch,
@@ -12,23 +13,24 @@ import {
   setDescrCard,
 } from 'src/store';
 
-import { LanguageQuery, ProjectType } from 'src/types';
+import { LanguageQuery, LocalStore, ProjectType } from 'src/types';
 
 import styles from './taskCcard.module.scss';
-import LinksBlock from 'src/components/linksBlock';
 
 export const TaskCard = () => {
-  const { t } = useTranslation();
-  const [tasks, setTasks] = useState<string>('all');
+  const categoryResult: string = localStorage.getItem(LocalStore.CATEGORY) || LocalStore.ALL;
 
+  const { t } = useTranslation();
+  const [tasks, setTasks] = useState<string>(categoryResult);
   const { cardsResult, cardCategories, isOpenModal } = useAppSelector((state) => state.cards);
   const dispatch = useAppDispatch();
 
-  const handleChangeCategory = (ctg: string) => {
+  const handleChangeCategory = (ctg: string): void => {
+    localStorage.setItem(LocalStore.CATEGORY, ctg);
     setTasks(ctg);
   };
 
-  const handleSetOpenModal = (card: ProjectType) => {
+  const handleSetOpenModal = (card: ProjectType): void => {
     dispatch(setDescrCard(card));
     dispatch(setOpenModal(!isOpenModal));
   };

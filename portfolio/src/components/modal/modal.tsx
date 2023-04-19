@@ -15,7 +15,7 @@ const Modal = () => {
   const { isOpenModal, cardDescr } = useAppSelector((state) => state.cards);
   const dispatch = useAppDispatch();
 
-  const handleCloseModal = () => {
+  const handleCloseModal = (): void => {
     dispatch(setOpenModal(!isOpenModal));
     document.body.style.overflow = 'unset';
   };

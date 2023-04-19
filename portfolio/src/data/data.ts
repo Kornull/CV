@@ -19,6 +19,7 @@ export const projectsData: DataProjectsType = {
         'React Router Hash Link',
         'Vite',
         'React Fast Marquee',
+        'LocalStorage',
         'SCSS.modules',
         'React Icons',
         'Stylelint',

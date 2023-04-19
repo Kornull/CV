@@ -19,6 +19,14 @@ export enum LanguageQuery {
   PAGES = 'pages',
 }
 
+export enum LocalStore {
+  LANG = 'portfolio-kor-lang',
+  CATEGORY = 'portfolio-kor-category',
+  ALL = 'all',
+  EN = 'en',
+  RU = 'ru',
+}
+
 export type ProjectType = {
   id: string;
   tech: string;

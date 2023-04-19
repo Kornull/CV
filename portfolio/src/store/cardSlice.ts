@@ -3,7 +3,11 @@ import { createSlice } from '@reduxjs/toolkit';
 
 import { projectsData } from 'src/data/data';
 
-import { ProjectType } from 'src/types';
+import { LocalStore, ProjectType } from 'src/types';
+
+if (!localStorage.getItem(LocalStore.CATEGORY)) {
+  localStorage.setItem(LocalStore.CATEGORY, LocalStore.ALL);
+}
 
 type CardState = {
   cards: ProjectType[];
