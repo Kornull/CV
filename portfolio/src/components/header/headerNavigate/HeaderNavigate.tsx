@@ -1,54 +1,34 @@
 import { NavLink } from 'react-router-dom';
-import { Link, animateScroll as scroll } from 'react-scroll';
+// import { Link, animateScroll as scroll } from 'react-scroll';
 import styles from '../Header.module.scss';
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 
 type NavigateProps = {
   openNavigate: boolean;
   setOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const HeaderNavigate = ({
-  openNavigate,
-  setOpenMenu,
-}: NavigateProps) => {
+export const HeaderNavigate = ({ openNavigate, setOpenMenu }: NavigateProps) => {
   const handleCloseMenu = (): void => {
     setOpenMenu(false);
-    scroll.scrollToTop();
   };
 
   return (
     <div
-      className={
-        openNavigate
-          ? `${styles.headerNavigate} ${styles.show}`
-          : styles.headerNavigate
-      }
+      className={openNavigate ? `${styles.headerNavigate} ${styles.show}` : styles.headerNavigate}
     >
       <nav className={styles.headerNavigateContainer}>
         <ul className={styles.headerLinks}>
           <li>
-            <Link
-              activeClass="active"
-              to="summary"
-              spy={true}
-              smooth={true}
-              offset={-50}
-              duration={100}
-              className={styles.headerLink}
-              onClick={handleCloseMenu}
-            >
+            <Link to="/#summary" className={styles.headerLink} onClick={handleCloseMenu}>
               summary
             </Link>
           </li>
           <li>
             <Link
-              activeClass="active"
-              to="skills"
-              spy={true}
+              to="/#skills"
               smooth={true}
-              offset={-50}
-              duration={100}
               className={styles.headerLink}
               onClick={handleCloseMenu}
             >
@@ -56,29 +36,22 @@ export const HeaderNavigate = ({
             </Link>
           </li>
           <li>
-            <NavLink
-              to="/fd"
+            <Link
+              to="/#tasks"
+              smooth={true}
               className={styles.headerLink}
               onClick={handleCloseMenu}
             >
+              projects
+            </Link>
+          </li>
+          <li>
+            <NavLink to="/ff" className={styles.headerLink} onClick={handleCloseMenu}>
               lorem
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/ff"
-              className={styles.headerLink}
-              onClick={handleCloseMenu}
-            >
-              lorem
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/"
-              className={styles.headerLink}
-              onClick={handleCloseMenu}
-            >
+            <NavLink to="/" className={styles.headerLink} onClick={handleCloseMenu}>
               main
             </NavLink>
           </li>

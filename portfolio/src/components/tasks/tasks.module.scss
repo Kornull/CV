@@ -1,0 +1,59 @@
+@import 'src/scss/default-styles';
+@import 'src/scss/mixins';
+
+.tasks {
+  @include default-container;
+  @include default-background;
+
+  &Container {
+    @include container-width;
+  }
+
+  &Title {
+    @include title-block;
+
+    color: $white;
+  }
+
+  &CardsBlock {
+    display: flex;
+    flex-flow: column wrap;
+    gap: $size20;
+    align-items: center;
+    justify-content: space-around;
+    width: $deg90;
+    margin: 0 auto;
+
+    @media (max-width: $w580) {
+      width: $deg100;
+    }
+  }
+}
+
+
+.category {
+  display: flex;
+  justify-content: space-around;
+  width: $deg100;
+  max-width: 400px;
+  margin: 0 auto;
+  color: $white;
+  font-weight: bold;
+  font-size: $size20;
+  font-family: $merriweather-font;
+
+  &Btns {
+    color: inherit;
+    font-size: inherit;
+
+    &:hover {
+      color: $gold-light;
+    }
+
+    @media (max-width: $w758) {
+      font-size: $size16;
+    }
+
+
+  }
+}

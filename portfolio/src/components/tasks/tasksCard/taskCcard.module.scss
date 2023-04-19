@@ -1,0 +1,115 @@
+@import 'src/scss/default-styles';
+@import 'src/scss/mixins';
+
+.card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+  width: $deg80;
+  height: 200px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  line-height: 1.4;
+  background: #000000a6;
+  border: 1px solid #ffffff6e;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #fff4;
+  transition: all 0.2s linear;
+
+  @media (max-width: $w580) {
+    width: $deg100;
+  }
+
+  &:hover {
+    box-shadow: 4px 4px 10px #ffffff9a;
+    transform: scale(1.01);
+  }
+
+  &ImageBlock {
+    position: relative;
+    width: $deg40;
+    height: inherit;
+    margin-bottom: 4px;
+    overflow: hidden;
+
+    @media (max-width: $w580) {
+      position: absolute;
+      z-index: -1;
+      width: $deg100;
+    }
+  }
+
+  &Description {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: $deg60;
+    padding: 8px;
+
+    @media (max-width: $w580) {
+      z-index: 1;
+      width: $deg100;
+      background: #000000d3;
+    }
+  }
+
+  &Image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &Title {
+    color: $white;
+    font-weight: bold;
+    font-size: $size22;
+    text-transform: capitalize;
+
+    @media (max-width: $w758) {
+      font-size: $size18;
+    }
+
+    @media (max-width: $w580) {
+      font-size: $size20;
+    }
+  }
+
+  &Text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: 120px;
+    margin-bottom: 12px;
+    color: $white;
+    font-size: $size18;
+    line-height: 1.4;
+
+    @media (max-width: $w758) {
+      font-size: $size14;
+    }
+
+    @media (max-width: $w580) {
+      font-size: $size16;
+    }
+  }
+
+  &Button {
+    position: relative;
+    width: auto;
+    margin-bottom: 4px;
+    padding-left: 4px;
+    color: $gold-light;
+    font-weight: bold;
+    font-size: $size14;
+    font-style: italic;
+    text-transform: lowercase;
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: $gold;
+    }
+  }
+
+}

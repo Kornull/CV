@@ -26,6 +26,7 @@ const Header = () => {
       setLang(LanguageQuery.EN);
       localStorage.setItem(LanguageQuery.LANG, LanguageQuery.EN);
     }
+    setOpenMenu(false);
   };
 
   const toggleDrawer = (): void => {
@@ -35,7 +36,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.headerContainer}>
-        <HeaderLogo />
+        <HeaderLogo closeMenu={setOpenMenu} />
 
         <HeaderButtons
           openMenu={toggleDrawer}

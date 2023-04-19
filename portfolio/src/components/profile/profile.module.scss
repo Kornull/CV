@@ -1,15 +1,12 @@
 @import 'src/scss/default-styles';
+@import 'src/scss/mixins';
 
 .profile {
   width: $width;
   min-height: 460px;
-  padding-top: 60px;
-  background-color: $black;
-  background-image: url('src/assets/bg-about.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  padding-top: 40px;
 
+  @include default-background;
 
   @media (max-width: $w980) {
     height: $deg100;
@@ -72,9 +69,14 @@
       }
 
       &Button {
-        color: $button-text;
+        color: $gold-light;
         font-size: inherit;
         text-transform: lowercase;
+        transition: color 0.2s linear;
+
+        &:hover {
+          color: $gold;
+        }
       }
     }
   }

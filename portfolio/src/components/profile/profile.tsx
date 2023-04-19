@@ -1,6 +1,6 @@
 import { ProfileSummary } from './profileSummary';
 
-import Image from 'src/assets/foto.png';
+import Image from 'src/assets/foto.webp';
 
 import styles from './profile.module.scss';
 
