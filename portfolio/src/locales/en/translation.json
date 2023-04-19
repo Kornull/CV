@@ -6,6 +6,8 @@
     "more": "show more",
     "close": "close"
   },
+  "contacts": "contacts",
+  "pages": "pages",
   "skills": "skills",
   "stack": "Stack: ",
   "work-title": "I've implemented: ",
@@ -43,6 +45,5 @@
       "descr": "Photographer's website",
       "work": "burger menu, dark / light theme, custom localisation, card loading by category, mobile version."
     }
-
   }
 }

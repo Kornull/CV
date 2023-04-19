@@ -63,6 +63,7 @@ const Modal = () => {
                 {t(`${LanguageQuery.DATA_PROJECT}.${cardDescr.id}.${LanguageQuery.WORK}`)}
               </article>
             </div>
+
             <div className={styles.modalDescriptionLinks}>
               <LinksBlock deploy={cardDescr.link} github={cardDescr.github} />
             </div>

@@ -14,6 +14,8 @@ export enum LanguageQuery {
   DESCR = 'descr',
   WORK = 'work',
   WORK_TEXT = 'work-title',
+  CONTACTS = 'contacts',
+  PAGES = 'pages',
 }
 
 export type ProjectType = {
