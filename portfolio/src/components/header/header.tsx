@@ -7,7 +7,7 @@ import { HeaderButtons } from './headerButtons';
 
 import { LanguageQuery } from 'src/types';
 
-import styles from './Header.module.scss';
+import styles from './header.module.scss';
 
 const Header = () => {
   const langResult: string = localStorage.getItem(LanguageQuery.LANG) || LanguageQuery.EN;

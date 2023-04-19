@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import { LanguageQuery } from 'src/types';
 
-import styles from '../Header.module.scss';
+import styles from '../header.module.scss';
 
 type NavigateProps = {
   openNavigate: boolean;

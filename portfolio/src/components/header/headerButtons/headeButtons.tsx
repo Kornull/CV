@@ -4,7 +4,7 @@ import { ImEarth } from 'react-icons/im';
 
 import { LanguageQuery } from 'src/types';
 
-import styles from '../Header.module.scss';
+import styles from '../header.module.scss';
 
 type ButtonsProps = {
   isOpen: boolean;

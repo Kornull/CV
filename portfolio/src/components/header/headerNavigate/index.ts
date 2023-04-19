@@ -1,1 +1,1 @@
-export * from './HeaderNavigate';
+export * from './headerNavigate';
