@@ -1,0 +1,43 @@
+@import './default-styles';
+
+@mixin container-width {
+  width: $deg100;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $size24;
+
+  @media (max-width: $w580) {
+    padding: $size12;
+  }
+}
+
+@mixin default-container {
+  width: $deg100;
+  min-height: $w300;
+  padding-top: 50px;
+}
+
+@mixin title-block {
+  margin: 0 auto 50px;
+  font-size: $size24;
+  font-family: $merriweather-font;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+@mixin default-background {
+  background-color: #131212;
+  background-image: url('/src/assets/bg-tasks.webp');
+  background-repeat: repeat;
+}
+
+@mixin after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: $deg100;
+  height: 4px;
+  background-color: $underline;
+  border-radius: $size16;
+  content: '';
+}

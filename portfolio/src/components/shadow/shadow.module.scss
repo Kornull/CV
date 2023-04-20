@@ -1,0 +1,18 @@
+@import 'src/scss/default-styles';
+
+.shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: $deg100;
+  height: 100vh;
+  background: #00000094;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+
+.active-shadow {
+  z-index: 9;
+  opacity: 1;
+}

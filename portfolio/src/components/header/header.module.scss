@@ -1,0 +1,178 @@
+@import 'src/scss/default-styles';
+@import 'src/scss/mixins';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: $width;
+  min-height: $min-heigth;
+  background: $bg-color-header;
+  box-shadow: 0 0 15px #030303;
+
+  &Container {
+    @include container-width;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+    padding: 0 16px;
+
+    @media (max-width: $w580) {
+      height: 40px;
+    }
+  }
+
+  &Logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    text-align: center;
+  }
+
+  &ButtonsBlock {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &ButtonLang {
+    position: relative;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    width: 50px;
+    height: 30px;
+    color: $white;
+    font-size: $size20;
+    text-align: center;
+
+    &:hover {
+      color: $gold-light;
+    }
+
+    &Icon {
+      width: 20px;
+      height: 24px;
+      color: inherit;
+    }
+  }
+
+  &Title {
+    color: $white;
+    font-weight: bold;
+    font-size: 26px;
+    font-family: $nova-font;
+    text-shadow: 0 0 6px $black;
+    transition: text-shadow 0.3s ease-out, color 0.3s ease-out;
+
+    &:hover {
+      color: $gold-light;
+    }
+  }
+
+  &Burger {
+    display: flex;
+    justify-content: center;
+    width: 56px;
+    padding: 6px;
+
+    &Icon {
+      width: 30px;
+      height: 30px;
+      color: $white;
+      cursor: pointer;
+      transition: width 0.23s ease-in, transform 0.3s ease-in;
+
+      &:hover {
+        color: $gold-light;
+      }
+    }
+  }
+
+  &Navigate {
+    display: flex;
+    align-items: center;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.2s linear;
+
+    &Container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: $deg100;
+      max-width: 1420px;
+      margin: 0 auto;
+      padding: 10px;
+
+      @media (max-width: $w798) {
+        justify-content: start;
+        margin-left: 32px;
+      }
+    }
+  }
+
+  &Navigate.show {
+    height: 50px;
+    opacity: 1;
+
+    @media (max-width: $w798) {
+      height: 210px;
+    }
+  }
+
+  &Links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $size16;
+    cursor: pointer;
+
+    @media (max-width: $w798) {
+      flex-direction: column;
+      justify-content: start;
+      width: $deg100;
+    }
+  }
+
+  &Link {
+    position: relative;
+    display: block;
+    gap: 6px;
+    align-items: center;
+    width: auto;
+    color: $white;
+    font-weight: 700;
+    font-size: $size18;
+    text-transform: capitalize;
+    transition: color 0.3s ease-out;
+
+    &::after {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: $deg90;
+      height: 2px;
+      background: $gold-light;
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+      content: '';
+    }
+
+    &:hover {
+      color: $gold-light;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.active {
+  transform: rotate(270deg);
+}

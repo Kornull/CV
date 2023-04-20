@@ -1,0 +1,68 @@
+@import 'src/scss/default-styles';
+@import 'src/scss/mixins';
+
+.footer {
+  width: $deg100;
+  min-height: $min-heigth;
+  background-color: $bg-color-header;
+
+  &Container {
+    @include container-width;
+
+    display: flex;
+    justify-content: space-around;
+    padding: $size14;
+    font-size: $size18;
+
+    @media (max-width: $w580) {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+  }
+
+  &Description {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    width: 265px;
+    padding: 0 10px;
+  }
+
+  &Title {
+    @include title-block;
+
+    margin: 0 0 6px;
+    color: $white;
+    font-size: $size20;
+  }
+
+  &List {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: $deg100;
+
+    &Item {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    &Icon {
+      width: 30px;
+      height: 36px;
+      color: $gold;
+    }
+  }
+
+  &Link {
+    color: $white;
+    transition: color 0.2s ease-out;
+
+    &:hover {
+      color: $gold-light;
+    }
+  }
+}

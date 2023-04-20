@@ -1,0 +1,135 @@
+@import 'src/scss/default-styles';
+@import 'src/scss/mixins';
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $deg100;
+  height: 100vh;
+  padding: 0 20px;
+  overflow: hidden;
+  background: #222121bb;
+  opacity: 0;
+  transition: all 0.3s linear;
+
+  &Content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: $deg100;
+    max-width: 800px;
+    min-height: 30vh;
+    max-height: 70vh;
+    padding: 10px;
+    overflow: hidden;
+    background: $black;
+    border-radius: 15px;
+    box-shadow: 0 0 6px #fffc;
+    transform: scale(0.3);
+    transition: all 0.3s linear;
+  }
+
+  &ImgBlock {
+    width: $deg100;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 5px 65px 0 0;
+
+    @media (max-width: $w898) {
+      display: none;
+      height: 100px;
+    }
+  }
+
+  &Description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: $deg100;
+    height: auto;
+    padding: 10px;
+    overflow: auto;
+    font-size: $size18;
+    line-height: 1.4;
+
+    @media (max-width: $w300) {
+      font-size: $size16;
+    }
+
+    &Title {
+      @include title-block;
+
+      position: relative;
+      margin-bottom: 8px;
+      color: $gold-light;
+      font-size: $size20;
+
+      @media (max-width: $w300) {
+        font-size: $size18;
+      }
+
+      &::after {
+        @include after;
+
+        bottom: -2px;
+        height: 2px;
+        background-color: $gold-light;
+      }
+
+      &Block {
+        color: $gold-light;
+        font-weight: 500;
+      }
+    }
+
+    &Text {
+      color: #7ae3e9;
+    }
+
+    &Links {
+      width: $deg90;
+      margin: 0 auto;
+
+      &:first-child {
+        width: 100px;
+      }
+    }
+  }
+
+  &Close {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 30px;
+    height: 30px;
+    background: $black;
+    border-radius: 50%;
+
+    &Icon {
+      width: $deg100;
+      height: $deg100;
+      color: $gold-light;
+      transition: all 0.3s linear;
+
+      &:hover {
+        color: $gold;
+      }
+    }
+  }
+}
+
+.active-modal {
+  z-index: 11;
+  opacity: 1;
+}
+
+.active-content {
+  transform: scale(1);
+  opacity: 1;
+}

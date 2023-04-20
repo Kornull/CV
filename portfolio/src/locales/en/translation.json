@@ -1,0 +1,56 @@
+{
+  "lang": "ru",
+  "about": "Hi, I am a Front-end developer. I have completed a course at the Rolling Scopes School. It wasn't an easy way, but I did it and I can say that it was cool. I did a lot of projects and gained a lot of knowledge. I met some interesting people and web development professionals. I tried my hand as a team leader in team development. Now it's time to move on and I'm looking for a company that will allow me to work with an interesting product and reach my full potential. ",
+  "about-full": "Hi, my name's Uladzimir and I am a front-end developer. I took a course at the Rolling Scopes School. It wasn't an easy way, but I did it and I can say that it was great. I did a lot of projects and gained a lot of knowledge. I met interesting people and web development professionals, and acted as a team leader of 3 people during the final assignment of the JavaScript course. During my studies I developed a lot of home projects, from pure HTML, CSS and JavaScript landing pages to SPA applications using React, Typescript. Now it's time to move on and I'm looking for a company that will allow me to work with an interesting product and reach my full potential. I have one year of experience in web application development (games, landing pages, SPA). Good knowledge of JavaScript basics allows me to learn new technologies quickly and add value to the team. My goal is to improve my skills in order to develop a quality and in-demand product. ",
+  "buttons": {
+    "more": "show more",
+    "close": "close"
+  },
+  "not": "This page does not exist. Please click ",
+  "here": "here",
+  "contacts": "contacts",
+  "pages": "pages",
+  "skills": "skills",
+  "summary": "summary",
+  "stack": "Stack: ",
+  "work-title": "Implemented: ",
+  "projects": "projects",
+  "projects-data": {
+    "tracker": {
+      "descr": "Trello analogue",
+      "work": "registration, authorization, profile, localization(i18next), reusable form component, menu burger,header project styling(material Ui), application and backend deployment."
+    },
+    "rick": {
+      "descr": "SPA based on open API.",
+      "work": "API requests, get data to create cards, create cards by the user, searching by filters and parameters, searching by page, routing, pagination, component testing (RTL, Jest)"
+    },
+    "todo": {
+      "descr": "Task Scheduler",
+      "work": "drag & drop, task drag & drop animation, view full task in modal window, scroll down completed tasks, edit a task, save task to localstorage, view on the screen from 320 pixels"
+    },
+    "race": {
+      "descr": "Racing game",
+      "work": "spa, api calls to the server, animation, creating/removing cars, changing car characteristics, leaderboard, sorting winners by several parameters, race reset, mass start, race on selected cars. Server delay of a few seconds is possible. All HTML generation takes place in the application script, the HTML file is empty."
+    },
+    "keyboard": {
+      "descr": "Virtual keyboard",
+      "work": "processing of keystrokes on the keyboard, interaction between the keyboard and mouse, language changes, localStorage, webpack. All HTML generation takes place in the application script, the HTML file is empty."
+    },
+    "store": {
+      "descr": "Virtual shop",
+      "work": "search bar, several sorting options: name, year, color, memory, quantity, popular, adding and removing from the cart, reset search options, reset localsote settings, data is saved in the localstore. The minimum app resolution is 768 pixels. All HTML generation takes place in the application script, the HTML file is empty."
+    },
+    "shelter": {
+      "descr": "Pet shelter website",
+      "work": "burger menu, custom slider, popup with additional information about the card, pagination, mobile version, tracking positions and screen size."
+    },
+    "photo": {
+      "descr": "Photographer's website",
+      "work": "burger menu, dark / light theme, custom localisation, card loading by category, mobile version."
+    },
+    "cv": {
+      "descr": "Portfolio",
+      "work": "burger menu, page navigation, fetching and saving state data, saving action data to LocalStorage (language change, card category selection), drawing cards, modal window, localisation, routing, infinite carousel, 404 page, website viewer with 320 pixels resolution (mobile version)"
+    }
+  }
+}
