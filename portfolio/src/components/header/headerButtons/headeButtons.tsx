@@ -23,17 +23,17 @@ export const HeaderButtons = ({ changeLang }: ButtonsProps) => {
 
   return (
     <div className={styles.headerButtonsBlock}>
-      <button className={styles.headerButtonLang} onClick={changeLang}>
+      <button className={styles.headerButtonLang} type="button" onClick={changeLang}>
         <ImEarth className={styles.headerButtonLangIcon} />
         {t(LanguageQuery.LANG)}
       </button>
-      <div className={styles.headerBurger} onClick={setOpenNavigate}>
+      <button className={styles.headerBurger} type="button" onClick={setOpenNavigate}>
         {
           <GiHamburgerMenu
             className={`${styles.headerBurgerIcon} ${isOpenNavigate && styles.active}`}
           />
         }
-      </div>
+      </button>
     </div>
   );
 };
