@@ -31,4 +31,6 @@
  * #### *infinite carousel*
  * #### *404 page*
  * #### *website viewer with 320 pixels resolution (mobile version)*
+ 
+ Follow this [link](https://portfolio-kornull.netlify.app/)
 
