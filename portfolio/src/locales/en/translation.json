@@ -17,7 +17,7 @@
   "projects": "projects",
   "projects-data": {
     "tracker": {
-      "descr": "Trello analogue",
+      "descr": "Trello analogue (team-dev)",
       "work": "registration, authorization, profile, localization(i18next), reusable form component, menu burger,header project styling(material Ui), application and backend deployment."
     },
     "rick": {
