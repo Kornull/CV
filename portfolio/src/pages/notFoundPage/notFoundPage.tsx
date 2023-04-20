@@ -19,7 +19,7 @@ const NotFoundPage = () => {
         <p className={styles.notBlockText}>
           {t(LanguageQuery.NOT)}{' '}
           <NavLink className={styles.notBlockLink} to="/">
-            {t(`${LanguageQuery.HERE}.`)}
+            {`${t(LanguageQuery.HERE)}.`}
           </NavLink>
         </p>
       </div>

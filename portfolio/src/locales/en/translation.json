@@ -50,7 +50,7 @@
     },
     "cv": {
       "descr": "Portfolio",
-      "work": "burger menu, page navigation, fetching and saving state data, saving action data to LocalStorage (language change, card category selection), drawing cards, modal window, localisation, routing, infinite carousel, 404 page, website viewer with 320 pixels resolution (mobile version)"
+      "work": "burger menu, page navigation, receiving and storing data in state, saving action data to LocalStorage (language change, card category selection), drawing cards, modal window, localisation, routing, infinite carousel, 404 page, website viewer with 320 pixels resolution (mobile version)"
     }
   }
 }
