@@ -1,4 +1,7 @@
 # CV
+## Screen:![Screenshot from 2023-04-20 17-16-22](https://user-images.githubusercontent.com/96052707/233394597-dbd61855-dd7f-4109-a78b-0cf164cadb50.png)
+
+
 
 ## Technology: 
 * ### *React*,
