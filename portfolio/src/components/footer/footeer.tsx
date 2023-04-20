@@ -73,7 +73,11 @@ const Footer = () => {
 
             <li className={styles.footerListItem}>
               <BsFillFileEarmarkMedicalFill className={styles.footerListIcon} />
-              <Link className={styles.footerLink} to="#" target="_blank">
+              <Link
+                className={styles.footerLink}
+                to="https://drive.google.com/file/d/1ThSesoaptEh6aE6yIMEnzMf8RlH4guvy/view?usp=share_link"
+                target="_blank"
+              >
                 resume
               </Link>
             </li>

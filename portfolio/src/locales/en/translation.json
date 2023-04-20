@@ -13,7 +13,7 @@
   "skills": "skills",
   "summary": "summary",
   "stack": "Stack: ",
-  "work-title": "I've implemented: ",
+  "work-title": "Implemented: ",
   "projects": "projects",
   "projects-data": {
     "tracker": {
@@ -50,7 +50,7 @@
     },
     "cv": {
       "descr": "Portfolio",
-      "work": "burger menu, page navigation, get and save data in state, card drawing, modal window, localisation, routing, infinite carousel, 404 page, website view from 320 pixel resolution (mobile version)"
+      "work": "burger menu, page navigation, fetching and saving state data, saving action data to LocalStorage (language change, card category selection), drawing cards, modal window, localisation, routing, infinite carousel, 404 page, website viewer with 320 pixels resolution (mobile version)"
     }
   }
 }

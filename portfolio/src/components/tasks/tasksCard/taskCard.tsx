@@ -69,7 +69,8 @@ export const TaskCard = () => {
                 <div className={styles.cardText}>
                   <h2>{t(`${LanguageQuery.DATA_PROJECT}.${card.id}.${LanguageQuery.DESCR}`)}</h2>
                   <p>
-                    {t(LanguageQuery.STACK)} : {setLineCheck(card.stack)}
+                    {t(LanguageQuery.STACK)}
+                    {setLineCheck(card.stack)}
                     <button className={styles.cardButton} onClick={() => handleSetOpenModal(card)}>
                       {t(LanguageQuery.BTN_MORE)}
                     </button>
