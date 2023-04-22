@@ -36,7 +36,7 @@ const Header = () => {
       <div className={styles.headerContainer}>
         <HeaderLogo />
 
-        <HeaderButtons changeLang={handleLanguageQuery} />
+        <HeaderButtons changeLang={handleLanguageQuery} lang={lang} />
       </div>
 
       <HeaderNavigate />

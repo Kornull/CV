@@ -6,7 +6,6 @@ import {
   BsSkype,
   BsFillFileEarmarkMedicalFill,
   BsGithub,
-  BsFillTelephoneFill,
 } from 'react-icons/bs';
 import { GrMail } from 'react-icons/gr';
 
@@ -27,12 +26,6 @@ const Footer = () => {
               <GrMail className={styles.footerListIcon} />{' '}
               <Link className={styles.footerLink} to="mailto:u.karnialiuk@gmail.com">
                 u.karnialiuk@gmail.com
-              </Link>
-            </li>
-            <li className={styles.footerListItem}>
-              <BsFillTelephoneFill className={styles.footerListIcon} />
-              <Link className={styles.footerLink} to="tel:+375297752412">
-                +375-29-775-24-12
               </Link>
             </li>
             <li className={styles.footerListItem}>
@@ -75,7 +68,7 @@ const Footer = () => {
               <BsFillFileEarmarkMedicalFill className={styles.footerListIcon} />
               <Link
                 className={styles.footerLink}
-                to="https://drive.google.com/file/d/1ThSesoaptEh6aE6yIMEnzMf8RlH4guvy/view?usp=share_link"
+                to="https://drive.google.com/file/d/1uc1s6lrK4SbGQh59qFknLIDJXvXOIJoh/view?usp=share_link"
                 target="_blank"
               >
                 resume
