@@ -11,7 +11,7 @@ import { LanguageQuery, LocalStore } from 'src/types';
 import styles from './header.module.scss';
 
 const Header = () => {
-  const langResult: string = localStorage.getItem(LanguageQuery.LANG) || LanguageQuery.EN;
+  const langResult: string = localStorage.getItem(LocalStore.LANG) || LanguageQuery.EN;
 
   const { i18n } = useTranslation();
   const dispatch = useAppDispatch();
