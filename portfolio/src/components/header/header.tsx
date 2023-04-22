@@ -6,7 +6,7 @@ import { HeaderNavigate } from './headerNavigate';
 import { HeaderButtons } from './headerButtons';
 import { setOpenMenu, useAppDispatch } from 'src/store';
 
-import { LanguageQuery } from 'src/types';
+import { LanguageQuery, LocalStore } from 'src/types';
 
 import styles from './header.module.scss';
 
@@ -21,12 +21,12 @@ const Header = () => {
     if (lang === LanguageQuery.EN) {
       i18n.changeLanguage(LanguageQuery.RU);
       setLang(LanguageQuery.RU);
-      localStorage.setItem(LanguageQuery.LANG, LanguageQuery.RU);
+      localStorage.setItem(LocalStore.LANG, LanguageQuery.RU);
     }
     if (lang === LanguageQuery.RU) {
       i18n.changeLanguage(LanguageQuery.EN);
       setLang(LanguageQuery.EN);
-      localStorage.setItem(LanguageQuery.LANG, LanguageQuery.EN);
+      localStorage.setItem(LocalStore.LANG, LanguageQuery.EN);
     }
     dispatch(setOpenMenu(false));
   };
