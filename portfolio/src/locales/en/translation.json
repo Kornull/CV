@@ -18,7 +18,7 @@
   "projects-data": {
     "tracker": {
       "descr": "Trello analogue (team-dev)",
-      "work": "registration, authorization, profile, localization(i18next), reusable form component, menu burger,header project styling(material Ui), application and backend deployment."
+      "work": "registration, authorization, profile, localization(i18next), reusable form component, menu burger,header project styling(material Ui), application and backend deployment. The first connection may take a few seconds to establish (specific to the server)."
     },
     "rick": {
       "descr": "SPA based on open API.",
@@ -30,7 +30,7 @@
     },
     "race": {
       "descr": "Racing game",
-      "work": "spa, api calls to the server, animation, creating/removing cars, changing car characteristics, leaderboard, sorting winners by several parameters, race reset, mass start, race on selected cars. Server delay of a few seconds is possible. All HTML generation takes place in the application script, the HTML file is empty."
+      "work": "spa, api calls to the server, animation, creating/removing cars, changing car characteristics, leaderboard, sorting winners by several parameters, race reset, mass start, race on selected cars. All HTML generation takes place in the application script, the HTML file is empty. The first connection may take a few seconds to establish (specific to the server)."
     },
     "keyboard": {
       "descr": "Virtual keyboard",
