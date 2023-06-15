@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import {
   BsLinkedin,
   BsTelegram,
-  BsSkype,
   BsFillFileEarmarkMedicalFill,
   BsGithub,
   BsFillTelephoneFill,
