@@ -36,12 +36,6 @@ const Footer = () => {
               </Link>
             </li>
             <li className={styles.footerListItem}>
-              <BsSkype className={styles.footerListIcon} />
-              <Link className={styles.footerLink} to="skype:live:vladimirkorneluk?chat">
-                kornull
-              </Link>
-            </li>
-            <li className={styles.footerListItem}>
               <BsTelegram className={styles.footerListIcon} />
               <Link className={styles.footerLink} to="https://t.me/kornul665" target="_blank">
                 kornul665
@@ -75,7 +69,7 @@ const Footer = () => {
               <BsFillFileEarmarkMedicalFill className={styles.footerListIcon} />
               <Link
                 className={styles.footerLink}
-                to="https://drive.google.com/file/d/1ThSesoaptEh6aE6yIMEnzMf8RlH4guvy/view?usp=share_link"
+                to="https://drive.google.com/file/d/1SaDKoMw1JwEAuc3MKbuXBOBiutMv_qW4/view?usp=drive_link"
                 target="_blank"
               >
                 resume
