@@ -52,5 +52,10 @@
       "descr": "Portfolio",
       "work": "burger menu, page navigation, receiving and storing data in state, saving action data to LocalStorage (language change, card category selection), drawing cards, modal window, localisation, routing, infinite carousel, 404 page, website viewer with 320 pixels resolution (mobile version)"
     }
+    ,
+    "products": {
+        "descr": "Product List Page",
+        "work": "Material UI (drawing of cards, lists, buttons), list of all products, display list of selected products on all pages, go to product page, possibility to view enlarged product image, get and save data to state, save action data to LocalStorage (favourite products), drawing of cards, localisation, routing, view site with 1920 pixels resolution."
+      }
   }
 }

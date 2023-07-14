@@ -3,6 +3,31 @@ import { DataProjectsType } from 'src/types';
 export const projectsData: DataProjectsType = {
   projects: [
     {
+      id: 'products',
+      tech: 'react',
+      title: 'Product List Page',
+      image: 'src/assets/imageProjects/products.webp',
+      link: 'https://kornull-product-list.netlify.app/',
+      github: 'https://github.com/Kornull/product-list-page-test',
+      stack: [
+        'React',
+        'Typescript',
+        'React Router',
+        'React Hooks',
+        'Material UI',
+        'react-hooks-global-state',
+        'react-image-magnify library',
+        'react-window',
+        'react-virtualized-auto-sizer',
+        'LocalStorage',
+        'SCSS.modules',
+        'Stylelint',
+        'EsLint',
+        'Vite',
+        'Yarn',
+      ],
+    },
+    {
       id: 'cv',
       tech: 'react',
       title: 'Personal Portfolio',
