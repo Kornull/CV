@@ -68,7 +68,7 @@ const Footer = () => {
               <BsFillFileEarmarkMedicalFill className={styles.footerListIcon} />
               <Link
                 className={styles.footerLink}
-                to="https://drive.google.com/file/d/1SaDKoMw1JwEAuc3MKbuXBOBiutMv_qW4/view?usp=drive_link"
+                to="https://drive.google.com/file/d/1m5enaa_mM5ytP-0Z6V9HrkODVQvewPUn/view?usp=sharing"
                 target="_blank"
               >
                 resume
