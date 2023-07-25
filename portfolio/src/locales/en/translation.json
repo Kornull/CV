@@ -56,6 +56,10 @@
     "products": {
         "descr": "Product List Page",
         "work": "Material UI (drawing of cards, lists, buttons), list of all products, display list of selected products on all pages, go to product page, possibility to view enlarged product image, get and save data to state, save action data to LocalStorage (favourite products), drawing of cards, localisation, routing, view site with 1920 pixels resolution."
+      },
+      "books-store": {
+        "descr": "Books store",
+        "work": "List of products, navigation through pages, view full information about the product, delete the product, change the price, all data come from the server. (Server response delay is possible at the first start of the application)"
       }
   }
 }

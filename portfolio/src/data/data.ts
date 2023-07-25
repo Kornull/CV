@@ -3,9 +3,25 @@ import { DataProjectsType } from 'src/types';
 export const projectsData: DataProjectsType = {
   projects: [
     {
+      id: 'books-store',
+      tech: 'react',
+      title: 'Books store (test task)',
+      image: 'src/assets/imageProjects/books.webp',
+      link: 'https://react-testovoe-zadanie.vercel.app/',
+      github: 'https://github.com/Kornull/slmax-react-testovoe-zadanie',
+      stack: [
+        'Next.js',
+        'Typescript',
+        'Routing',
+        'Incremental Static Regeneration',
+        'SSR',
+        'Rest API',
+      ],
+    },
+    {
       id: 'products',
       tech: 'react',
-      title: 'Product List Page',
+      title: 'Product List Page (test-task)',
       image: 'src/assets/imageProjects/products.webp',
       link: 'https://kornull-product-list.netlify.app/',
       github: 'https://github.com/Kornull/product-list-page-test',
@@ -15,6 +31,7 @@ export const projectsData: DataProjectsType = {
         'React Router',
         'React Hooks',
         'Material UI',
+        'Rest API',
         'react-hooks-global-state',
         'react-image-magnify library',
         'react-window',
