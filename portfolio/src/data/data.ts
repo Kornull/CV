@@ -128,15 +128,6 @@ export const projectsData: DataProjectsType = {
       ],
     },
     {
-      id: 'race',
-      tech: 'typescript',
-      title: 'Asynk Race',
-      image: 'src/assets/imageProjects/race.webp',
-      link: 'https://kornull-async.netlify.app/',
-      github: 'https://github.com/Kornull/RS-School-Stage-1-2/tree/asynk-race',
-      stack: ['Typescript', 'SCSS', 'Fetch', 'Webpack', 'RequestAnimationFrame', 'Asynk API call'],
-    },
-    {
       id: 'keyboard',
       tech: 'javascript',
       title: 'Keyboard',
