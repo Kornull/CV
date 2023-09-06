@@ -53,9 +53,13 @@
         "descr": "Product List Page",
         "work": "Material UI (drawing of cards, lists, buttons), list of all products, display list of selected products on all pages, go to product page, possibility to view enlarged product image, get and save data to state, save action data to LocalStorage (favourite products), drawing of cards, localisation, routing, view site with 1920 pixels resolution."
       },
-      "books-store": {
+    "books-store": {
         "descr": "Books store",
         "work": "List of products, navigation through pages, view full information about the product, delete the product, change the price, all data come from the server. (Server response delay is possible at the first start of the application)"
+      },
+    "google-clone": {
+        "descr": "Google clone",
+        "work": "main search form on the main page, header with the search form on the search result page, main search results page, search results page, pagination, metadata update, api calls, card component with search result data (text / links / images ), routing, loading component, no result component, error component, viewing the site with 320 pixels resolution (mobile version),"
       }
   }
 }

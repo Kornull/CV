@@ -3,6 +3,27 @@ import { DataProjectsType } from 'src/types';
 export const projectsData: DataProjectsType = {
   projects: [
     {
+      id: 'google-clone',
+      tech: 'react',
+      title: 'Google Clone',
+      image: 'src/assets/imageProjects/google-clone.webp',
+      link: 'https://kornull-google-clone.vercel.app/',
+      github: 'https://github.com/Kornull/google-clone',
+      stack: [
+        'NextJs',
+        'Typescript',
+        'Routing',
+        'React Hooks',
+        'React Icons',
+        'REST API',
+        'Tailwind.css',
+        'EsLint',
+        'Google Developers API',
+        'eXTReMe-IP-LOOKUP API',
+        'Random word API',
+      ],
+    },
+    {
       id: 'books-store',
       tech: 'react',
       title: 'Books store (test task)',
