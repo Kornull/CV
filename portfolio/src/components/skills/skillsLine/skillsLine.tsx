@@ -8,7 +8,7 @@ import styles from '../skills.module.scss';
 export const SkillsLine = () => {
   return (
     <div className={styles.skillMarguee}>
-      <Marquee speed={40} gradientWidth={120}>
+      <Marquee speed={40} gradientWidth={120} gradient={true}>
         {skillNumberImgArray.map((num) => (
           <img key={num} className={styles.skillMargueeImg} src={imageNewUrl(num)} alt="" />
         ))}
